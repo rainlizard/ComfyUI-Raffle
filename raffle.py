@@ -45,7 +45,7 @@ class Raffle:
                 # Replace all individual category booleans with a single text field for excluded categories
                 "exclude_categories": ("STRING", {
                     "multiline": True,
-                    "default": "clothes_and_accessories, female_physical_descriptors, named_garment_exposure, specific_garment_interactions, speech_and_text, standard_physical_descriptors, metadata_and_attribution, intentional_design_exposure, two_handed_character_items, holding_large_items",
+                    "default": "clothes_and_accessories, female_physical_descriptors, named_garment_exposure, specific_garment_interactions, speech_and_text, standard_physical_descriptors, metadata_and_attribution, intentional_design_exposure, two_handed_character_items, holding_large_items, color_scheme",
                     "tooltip": "Enter category names to exclude, separated by commas. The complete list of available categories can be seen in the 'Debug info' output."
                 })
             },
@@ -179,7 +179,7 @@ class Raffle:
         all_categories = [
             'abstract_symbols',
             'actions',
-            'artistic_styles_and_publication_formats',
+            'artstyle_technique',
             'background_objects',
             'bodily_fluids',
             'camera_angle_perspective',
@@ -187,10 +187,12 @@ class Raffle:
             'camera_framing_composition',
             'character_count',
             'clothes_and_accessories',
+            'color_scheme',
             'content_censorship_methods',
             'expressions_and_mental_state',
             'female_intimate_anatomy',
             'female_physical_descriptors',
+            'format_and_presentation',
             'gaze_direction_and_eye_contact',
             'general_clothing_exposure',
             'generic_clothing_interactions',
