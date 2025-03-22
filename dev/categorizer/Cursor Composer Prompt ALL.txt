@@ -1,0 +1,43 @@
+# Tag Categorization Instructions
+
+## Reference Materials
+- Categories reference file: manual_categorization.txt
+- Files to process: All files in C:\AI\ComfyUI\custom_nodes\comfyui-raffle\dev\categorizer\split_n_combine\
+
+## Process Overview
+For each N_uncategorized.txt file:
+
+### Step 1: Check for Existing Categorized File
+1. Check if N_categorized.txt already exists
+2. If it exists, skip this file and move to the next one
+3. If it doesn't exist, proceed with categorization
+
+### Step 2: First Pass Categorization
+1. Format each tag as: [category_name] tag_name
+2. Categorize each tag based on:
+   - Category definitions from manual_categorization.txt
+   - Similar existing categorized tags
+   - Tag context and meaning
+3. Save the results in a new file named N_categorized.txt in the same directory
+
+### Step 3: Second Pass Review
+1. Read the file you just saved
+2. Review each categorized tag again with fresh perspective
+3. Pay special attention to:
+   - Consistency between similar tags
+   - Edge cases that might fit better in different categories
+   - Tags that might have multiple possible interpretations
+4. Make any necessary adjustments to improve accuracy
+5. Overwrite the same file with the final results
+
+### Step 4: Move to Next File
+1. Process each uncategorized file in sequence
+2. Continue until all N_uncategorized.txt files have been processed or skipped
+
+## Important Notes
+- Only process files that follow the N_uncategorized.txt pattern
+- Skip files that already have a corresponding N_categorized.txt file
+- Create new N_categorized.txt files for processed content
+- Work through files in sequence, but not before doing a Second Pass review
+- The second pass is crucial for maintaining consistency and accuracy
+- Always proceed without interruption or asking for confirmation.

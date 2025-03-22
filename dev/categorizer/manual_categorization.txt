@@ -1,0 +1,121 @@
+// ::: Definitions :::
+// Tags are categorized based on how they modify a base human subject.
+// Nondescript: Basic noun tags that identify items or features without additional description. Examples: shirt, breasts, nipples, hair, legs, arms
+// Descript: Modifier tags that add specific qualities or characteristics. Examples: white_shirt, medium_breasts, inverted_nipples, long_hair, wings, horns, mustache
+
+[clothes_and_accessories] Primary articles of clothing, fashion accessories, costume elements, and outfit-defined character types
+puffy_sleeves, belt, black_pants, brown_vest, detached_sleeves, dress, frills, shirt, wide_sleeves, pants, x_hair_ornament, hair_ornament, pink_dress, white_thighhighs, white_shirt, thighhighs, vest, frilled_sleeves, long_sleeves, maid, maid_headdress, hair_flower, skirt, hat, gloves, ribbon, bow, animal_ears, school_uniform, jacket, swimsuit, hair_ribbon, short_sleeves, hair_bow, bikini, pleated_skirt, hairband, earrings, boots, striped, cat_ears, virtual_youtuber, rabbit_ears, military, magical_girl, playboy_bunny, nontraditional_miko, hood_up, crossdressing, looking_over_eyewear, flag_print, american_flag, panties, floral_print, animal_print, vertical_stripes, polka_dot, plaid, underwear, miniskirt, showgirl_skirt, bespectacled, cross
+
+[specific_garment_interactions] Contains tags that reference specific garment types
+dress_lift, pants_pull, open_belt, open_jacket, open_shirt, shirt_lift, skirt_lift, hood_down, strap_slip, upskirt, headwear_removed, midriff_peek, open_clothes, partially_unbuttoned, unbuttoned, torn_pantyhose, torn_panties, torn_jeans, torn_swimsuit, torn_gloves, upshirt, upshorts
+
+[speech_and_text] Text Elements & Speech Bubbles
+speech_bubble, thought_bubble, english_text, spoken_heart, spoken_ellipsis
+
+[metadata_and_attribution] Technical Metadata & Attribution
+artist_name, patreon_logo, patreon_username, twitter_logo, watermark, signature, twitter_username, character_name, dated, copyright_name, web_address, page_number, commentary, english_commentary
+
+[camera_focus_subject] Camera Focus/Subject (What the camera is primarily focusing on)
+male_focus, solo_focus, multiple_views, pov, feet_out_of_frame, out_of_frame
+
+[camera_framing_composition] Camera Framing/Composition (How the subject is composed within the frame or what portions are shown/cropped)
+full_body, upper_body, cowboy_shot, portrait, close-up, cropped_legs
+
+[abstract_symbols] Visual abstract symbols that represent concepts rather than literal objects. Does not include pattern prints or designs on clothing.
+heart, star_(symbol), petals, crescent
+
+[camera_angle_perspective] Camera Angle/Perspective (How the camera is positioned relative to the subject)
+from_behind, from_side, from_above, from_below, dutch_angle, profile, foreshortening
+
+[male_intimate_anatomy] (Nondescript) Basic anatomical features related to male intimate/sexual parts. Only includes unmodified base terms without descriptive qualities or actions. This category is strictly for naming body parts themselves, NOT actions performed with/on these parts or their states.
+penis, erection, testicles, male_pubic_hair, multiple_penises, bulge
+
+[publicly_visible_anatomy] (Nondescript) Basic anatomical features that are ALWAYS visible in everyday situations. Only includes unmodified base terms.
+back, collarbone, eyebrows, face, fingernails, hands, legs, lips
+
+[sfw_clothed_anatomy] (Nondescript) Basic anatomical features that all humans possess, which are typically hidden by clothes but can be shown in non-intimate contexts. Only includes unmodified base terms that refer to universal body parts, not descriptive qualities.
+navel, stomach, ribs, soles, armpits, toenails, toes, feet
+
+[thematic_settings] Contextual tags that establish tone and setting through holidays, time periods, or situational themes. Focuses on environmental context only - character entities and physical beings belong in descriptor categories.
+science_fiction, cowboy_western, halloween, happy_birthday, new_year, happy_valentine, horror_(theme), wedding, christmas, april_fools, injury
+
+[generic_clothing_interactions] Generic clothing interactions that could apply to any garment
+clothes_lift, clothes_pull, clothing_aside, torn_clothes, wet_clothes, torn_legwear, wet, panty_lift, panty_pull, undressing, wardrobe_malfunction
+
+[bodily_fluids] Male or female bodily fluids
+cum, saliva, blood, pussy_juice, cum_in_pussy, cum_on_body, facial, ejaculation, cum_on_breasts, cumdrip, cum_in_mouth
+
+[female_intimate_anatomy] (Nondescript) Base anatomical terms ONLY - no descriptors/modifiers (e.g., "breasts" YES, "large_breasts" NO). Descriptive versions belong in [female_physical_descriptors].
+ass, breasts, groin, nipples, pussy, pubic_hair, anus, ass_visible_through_thighs, female_pubic_hair, butt_crack, cameltoe, areolae
+
+[gaze_direction_and_eye_contact] Eye direction and what the character is looking at or facing
+looking_at_viewer, looking_back, looking_at_another, looking_to_the_side, looking_down, looking_up, looking_away, looking_ahead, looking_afar, looking_at_object, looking_at_penis, eye_contact, facing_viewer
+
+[lighting_and_vfx] Visual effects that enhance artwork through lighting techniques, shine effects, motion indicators, and other visual enhancements like bloom, lens flares, or emphasis lines.
+bloom, blurry, shiny, shiny_clothes, shiny_hair, shiny_skin, lens_flare, light_particles, backlighting, shadow, glowing, motion_lines, emphasis_lines, outline, light_rays, sparkle, bokeh
+
+[artistic_styles_and_publication_formats] Distinct artistic presentation styles and formats including color treatments like monochrome/greyscale, comic styles like 4koma/chibi, and specialized formats like dakimakura covers.
+monochrome, comic, greyscale, chibi, sketch, 4koma, parody, cover, letterboxed, cover_page, doujin_cover, one-hour_drawing_challenge, blue_theme, spot_color, gradient, dakimakura_(medium)
+
+[special_backgrounds] Any backgrounds that aren't physical locations
+3d_background, simple_background, white_background, blurry_background, depth_of_field, sparkle_background, grey_background, gradient_background, blue_background, transparent_background, pink_background, border, black_background, yellow_background, red_background, two-tone_background, white_border, brown_background, purple_background, green_background, outside_border
+
+[character_count] Character count tags that specify the number and type of characters present. Any tags that describe a character's appearance do not go here.
+1girl, 1boy, 2girls, multiple_girls, solo, multiple_boys, 3girls, 2boys, 4girls, no_humans, 6+girls, siblings, 3boys, 5girls, couple, 1other, 6+boys, 4boys
+
+[relationships] Tags strictly describing relationships
+hetero, yuri, yaoi, ffm_threesome, threesome, sisters, twins
+
+[nudity_and_absence_of_clothing] States of bodily exposure and nudity without any reference to garments or clothing. Focuses solely on exposed body parts, states of undress, and "no_X" tags that indicate absence of generic clothing categories.
+bare_arms, bare_back, bare_hips, bare_legs, bare_pectorals, bare_shoulders, barefoot, bottomless, completely_nude, covered_abs, covered_collarbone, covered_navel, covered_nipples, no_bra, no_blindfold, no_eyepatch, no_eyewear, no_gloves, no_headwear, no_legwear, no_panties, no_pants, no_shirt, no_shoes, no_socks, nude, partially_visible_vulva, penis_outside, pubic_hair_peek, single_bare_shoulder, spread_pussy_under_clothes, topless, topless_male, underwear_only, penis_peek, clothed_female_nude_male
+
+[general_clothing_exposure] Tags describing exposure related to unspecified clothing types, general clothing terms, or mixed states of dress without reference to specific named garments.
+accidental_exposure, breast_slip, clothed_sex, erection_under_clothes, nipple_slip, panty_peek, pantyshot, see-through, cleavage, areola_slip, breasts_out, one_breast_out, pussy_peek, anus_peek, armpit_peek
+
+[named_garment_exposure] Tags describing how body parts become visible through, around, or in relation to specifically named garment types (like "hoodie", "kimono", "bikini", "bra", etc.).
+bikini_top_removed, bra_peek, bra_visible_through_clothes, downblouse, naked_bandage, naked_hoodie, naked_jacket, naked_kimono, naked_overalls, naked_scarf, nearly_naked_apron, see-through_dress, see-through_shirt, see-through_skirt, off_shoulder, naked_shirt
+
+[intentional_design_exposures] Specific anatomical exposures that are intentionally created by particular clothing designs or styles. These tags describe body parts visible due to deliberate cutouts, specific garment shapes, or unique clothing combinations (NOT generic clothing malfunctions, accidents, general states of undress, or exposures that can occur with any type of clothing like cleavage). These are exposures that require specific design elements or garment types to create the described effect.
+midriff, underboob, sideboob, zettai_ryouiki, boob_window, thigh_gap, breast_curtains, revealing_clothes, virgin_killer_sweater, waist_cutout, high_slit, backless, backless_outfit, halterneck, side_slit
+
+[content_censorship_methods] Technical approaches used to intentionally hide, obscure, or reveal explicit content through visual editing techniques, digital/artistic censoring elements, or camera framing methods.
+bar_censor, blank_censor, blur_censor, censored, censored_nipples, character_censor, convenient_censoring, hair_censor, heart_censor, identity_censor, light_censor, mosaic_censoring, novelty_censor, nude_cover, out-of-frame_censoring, pointless_censoring, soap_censor, steam_censor, tail_censor, uncensored
+
+[background_objects]
+ball, bowl, box, bug, cat, couch, crystal, curtains, desk, dog, flower, food, fruit, lantern, leaf, pillow, plant, plate, rabbit, red_rose, rose, skull, table, tray, turret, bed, chair, bed_sheet, window, pokemon_(creature)
+
+[physical_locations]
+day, gazebo, outdoors, sky, cloud, indoors, water, tree, blue_sky, night, ocean, beach, moon, sunlight, cloudy_sky, grass, fire, building, wind, nature, scenery, star_(sky), night_sky, snow, full_moon, forest, rain, starry_sky, reflection, smoke, bubble, steam, sunset, ice, cherry_blossoms, butterfly, fish
+
+[expressions_and_mental_state] Expressions & Mental State. Includes anime expressions like "anger_vein" and "flying_sweatdrops".
+blush, closed_eyes, surprised, wide-eyed, open_mouth, smile, closed_mouth, :d, sweat, parted_lips, one_eye_closed, teeth, tongue, tears, tongue_out, sweatdrop, grin, :o, v, :3, ^_^, nose_blush, frown, embarrassed, expressionless, heart-shaped_pupils, upper_teeth, flying_sweatdrops, wavy_mouth, half-closed_eyes, happy, trembling, ;d, crying, light_smile, >_<, ^^^, ?, clenched_teeth, drooling, shaded_face, :<, anger_vein, angry, :p, breath, heavy_breathing, tearing_up, !, naughty_face, empty_eyes, crying_with_eyes_open, jitome, :q, serious, smirk, @_@, ;)
+
+[sex_acts] Sexual activities and intimate physical interactions between characters
+group_sex, sex, vaginal, oral, breast_grab, fellatio, bondage, girl_on_top, sex_from_behind, breast_press, between_breasts, licking, paizuri, masturbation, breast_hold, cowgirl_position, between_legs, handjob, after_sex, fingering, doggystyle, hand_on_another's_head, breast_squeeze, ass_grab, missionary, object_insertion, bouncing_breasts, spread_pussy, spread_anus, tentacles
+
+[poses] Body positions and stances that describe how characters are positioned
+bent_over, spread_legs, leg_lift, lying, sitting, standing, on_back, arm_up, arms_up, head_tilt, hand_on_hip, hands_up, kneeling, leaning_forward, arm_support, on_bed, on_side, wariza, arms_behind_back, crossed_arms, leg_up, squatting, bound, standing_on_one_leg, crossed_legs, outstretched_arms, sleeping, own_hands_together, straddling, on_stomach, outstretched_arm, all_fours, arms_behind_head, interlocked_fingers, knees_up, seiza, knees_together_feet_apart, legs_up, arm_behind_back, arm_at_side, legs_apart, contrapposto, hand_in_pocket, hand_between_legs, upside-down, restrained, pose, legs_together, paw_pose
+
+[actions] Dynamic movements and physical activities that characters perform
+kiss, toe_scrunch, hand_up, hug, holding_hands, mouth_hold, grabbing, eating, lifted_by_self, pointing, carrying, finger_to_mouth, index_finger_raised, wading, walking, flying, partially_submerged, floating, running, head_rest, hand_in_own_hair, hands_on_hips, covering, clenched_hand, hand_on_own_chest, clenched_hands, hand_on_own_face
+
+[female_physical_descriptors] (Descript) Physical characteristics primarily associated with female characters. This category is for physical attributes and features that female characters possess (how they appear), NOT actions they perform (what they do).
+black_hair, blue_hair, medium_breasts, short_hair, long_hair, bangs, blue_eyes, large_breasts, hair_between_eyes, brown_eyes, twintails, ponytail, braid, ahoge, sidelocks, multicolored_hair, small_breasts, dark-skinned_female, symbol-shaped_pupils, loli, aged_down, monster_girl, cat_girl, horse_girl, demon_girl, fox_girl, child, genderswap, genderswap_(mtf), breasts_apart, dragon_girl, aged_up, hair_over_breasts, thighs, large_areolae
+
+[male_physical_descriptors] (Descript) Physical characteristics primarily associated with male characters. This category is for physical attributes and features that male characters possess (how they appear), NOT actions they perform (what they do).
+six-pack, muscular_male, bara, athletic, beard, chest_hair, facial_hair, stubble, goatee, mustache, faceless_male, dark-skinned_male, otoko_no_ko, pectorals
+
+[standard_physical_descriptors] Physical characteristics that could apply to male or female. This category is for physical attributes and features that characters possess (how they appear), NOT actions they perform (what they do). Do not include any types of "actions" in here.
+horns, pointy_ears, tail, fang, cat_tail, animal_ear_fluff, fox_ears, fox_tail, fake_animal_ears, fangs, abs, halo, wolf_ears, bat_wings, horse_ears, robot, elf, multiple_tails, demon_horns, third_eye, rabbit_tail, dog_ears, demon_tail, feathered_wings, claws, wolf_tail, single_horn, extra_ears, forehead, furry, horse_tail, personification, dual_persona, dragon_horns, kemonomimi_mode, black_wings, demon_wings, oni_horns, veins, futanari, animal_hands, dog_tail, wings, angel_wings, monster, ghost, oni, faceless, hair_over_eyes, eyebrows_hidden_by_hair, eyes_visible_through_hair, one_eye_covered, muscular, floating_hair, glowing_eyes, bright_pupils, androgynous, eyebrows_hidden_by_hair
+
+[one_handed_character_items] Items that can be easily held or carried with one hand. These are portable objects that characters can interact with, not fixed/permanent features of a scene.
+innertube, sheathed, stuffed_animal, stuffed_toy, teddy_bear, umbrella, ofuda, condom, lantern, alcohol, bottle, cellphone, cigarette, cup, drinking_glass, drinking_straw, gift, microphone, phone, poke_ball, popsicle, smartphone, teacup, bowl, plate, tray, ball, box, fruit, pillow, rose, red_rose, flag
+
+[two_handed_character_items] Items that typically require two hands to use or carry properly. These are objects meant to be operated by characters, not background furniture or fixed environmental elements.
+turret, ground_vehicle, instrument, motor_vehicle, weapon, sword, machinery, mecha, broom
+
+[holding_small_items] Tags that describe the action of a character actively holding, carrying, or manipulating a small object with their hands. These focus on the interaction rather than just the object itself.
+holding_cup, holding_food, holding_flower, holding, holding_poke_ball, holding_bag, holding_book, holding_umbrella, holding_bottle, holding_phone, holding_cigarette, holding_rose, holding_plate, holding_microphone
+
+[holding_large_items] Tags that describe the action of a character actively holding, wielding, or operating objects that typically require two hands or significant effort. These focus on the handling action rather than just the object itself.
+dual_wielding, holding_gun, holding_sword, holding_weapon, holding_staff, holding_instrument
