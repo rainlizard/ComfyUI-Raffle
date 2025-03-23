@@ -4796,7 +4796,7 @@
 [clothes_and_accessories] prayer_beads
 [background_objects] holly
 [background_objects] traffic_light
-[generic_clothing_interactions] torn_legwear
+[specific_garment_interactions] torn_legwear
 [one_handed_character_items] trumpet
 [background_objects] chicken_(food)
 [character_count] 3others
@@ -10060,7 +10060,7 @@
 [actions] skateboarding
 [one_handed_character_items] paperclip
 [background_objects] melon_soda
-[clothes_and_accessories] torn_sweater
+[specific_garment_interactions] torn_sweater
 [sex_acts] sucking_male_nipple
 [holding_small_items] holding_cigar
 [clothes_and_accessories] brown_hakama
@@ -13770,7 +13770,7 @@
 [standard_physical_descriptors] double_chin
 [thematic_settings] chemistry
 [clothes_and_accessories] frilled_necktie
-[clothes_and_accessories] torn_vest
+[specific_garment_interactions] torn_vest
 [speech_and_text] danmaku_comments
 [clothes_and_accessories] antler_ornament
 [background_objects] olive
@@ -15522,7 +15522,7 @@
 [clothes_and_accessories] insect_hair_ornament
 [clothes_and_accessories] shooting_star_hair_ornament
 [metadata_and_attribution] politics
-[clothes_and_accessories] torn_bow
+[specific_garment_interactions] torn_bow
 [two_handed_character_items] rakuyo_(bloodborne)
 [relationships] opposing_sides
 [metadata_and_attribution] twitch.tv
@@ -17317,7 +17317,7 @@
 [standard_physical_descriptors] puffy_lips
 [background_objects] three_monkeys
 [thematic_settings] snow_on_body
-[generic_clothing_interactions] torn_apron
+[specific_garment_interactions] torn_apron
 [poses] trembling_legs
 [metadata_and_attribution] birthday_connection
 [clothes_and_accessories] striped_cardigan
@@ -17398,7 +17398,7 @@
 [clothes_and_accessories] unworn_earring
 [actions] climbing_tree
 [one_handed_character_items] king_of_hearts_(playing_card)
-[generic_clothing_interactions] torn_footwear
+[specific_garment_interactions] torn_footwear
 [metadata_and_attribution] swimwear_(module)
 [specific_garment_interactions] extended_upskirt
 [standard_physical_descriptors] squirrel_boy

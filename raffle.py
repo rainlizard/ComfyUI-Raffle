@@ -4,16 +4,17 @@ import random
 
 # Default values for Raffle node
 DEFAULT_FILTER_OUT_TAGS = """monochrome, greyscale,
-anus, anus_peek, spread_anus, spreading_own_anus, spread_anus_under_clothes,
-anal, anal_only, after_anal, anal_fluid,
-anal_object_insertion, butt_plug, jewel_butt_plug, anal_beads,
+cross-section, cervix, cervical_penetration, uterus, x-ray, internal_cumshot,
+lactation, forced_lactation, male_lactation, projectile_lactation, lactation_through_clothes, breast_milk,
+male_focus, male_penetrated, interracial, dark-skinned_male,
 gaping, extreme_gaping,
 prolapse, anal_prolapse, fisting, anal_fisting,
-cross-section, cervix, cervical_penetration, uterus, internal_cumshot, x-ray,
-lactation, forced_lactation, male_lactation, projectile_lactation, lactation_through_clothes, breast_milk,
-female_pubic_hair, pubic_hair, pubic_hair_peek,
-male_focus, male_penetrated, interracial, dark-skinned_male,
-condom, used_condom, condom_wrapper, condom_in_mouth, holding_condom, condom_on_penis, multiple_condoms, condom_packet_strip, pointless_condom, condom_belt, condom_box, used_condom_on_penis, condom_left_inside, colored_condom, okamoto_condoms, condom_wrapper_in_clothes, condom_thigh_strap, buying_condoms, broken_condom, used_condom_in_clothes"""
+anal, anal_only, after_anal, anal_fluid,
+anal_object_insertion, butt_plug, jewel_butt_plug, anal_beads, vibrator_in_anus,
+anus, cum_in_ass, spread_anus, anus_peek, puckered_anus, dark_anus, presenting_anus, spreading_own_anus, anus_cutout, censored_anus, spread_anus_under_clothes, colored_anus,
+pubic_hair, female_pubic_hair, pubic_hair_peek, colored_pubic_hair, sparse_pubic_hair, mismatched_pubic_hair, excessive_pubic_hair, shaped_pubic_hair,
+condom, used_condom, condom_wrapper, condom_in_mouth, holding_condom, condom_on_penis, multiple_condoms, condom_packet_strip, pointless_condom, condom_belt, condom_box, used_condom_on_penis, condom_left_inside, colored_condom, okamoto_condoms, condom_wrapper_in_clothes, condom_thigh_strap, buying_condoms, broken_condom, used_condom_in_clothes,
+"""
 
 DEFAULT_EXCLUDE_TAGLISTS = "comic, 4koma, multiple_girls, multiple_boys, multiple_views, reference_sheet, 2girls, 3girls, 4girls, 5girls, 6+girls, 2boys, 3boys, 4boys, 5boys, 6+boys, gangbang, threesome, mmf_threesome, ffm_threesome, group_sex, cooperative_fellatio, cooperative_paizuri, double_handjob, surrounded_by_penises, furry, obese, yaoi, yuri, otoko_no_ko, strap-on, futa_with_female, futa_without_pussy, implied_futanari, futanari, diaper, fart, pee, peeing, pee_puddle, pee_stain, peeing_self, golden_shower, scat, guro, ero_guro, intestines, vore, horse_penis"
 
