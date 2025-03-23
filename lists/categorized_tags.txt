@@ -2541,7 +2541,7 @@
 [clothes_and_accessories] unworn_panties
 [actions] fox_shadow_puppet
 [color_scheme] green_theme
-[female_intimate_anatomy] navel_hair
+[standard_physical_descriptors] navel_hair
 [clothes_and_accessories] heart_print
 [clothes_and_accessories] print_dress
 [clothes_and_accessories] chest_sarashi
@@ -5605,7 +5605,7 @@
 [clothes_and_accessories] full-length_zipper
 [background_objects] eagle
 [clothes_and_accessories] star_sticker
-[female_intimate_anatomy] pussy_piercing
+[female_physical_descriptors] pussy_piercing
 [standard_physical_descriptors] jaguar_ears
 [physical_locations] in-universe_location
 [standard_physical_descriptors] red_hands
@@ -5625,7 +5625,7 @@
 [clothes_and_accessories] happi
 [standard_physical_descriptors] messy
 [background_objects] takoyaki
-[female_intimate_anatomy] blonde_pubic_hair
+[female_physical_descriptors] blonde_pubic_hair
 [metadata_and_attribution] group_name
 [metadata_and_attribution] art_tools_in_frame
 [standard_physical_descriptors] asian
@@ -5967,7 +5967,7 @@
 [poses] riding_pokemon
 [holding_small_items] holding_notebook
 [female_physical_descriptors] braided_sidelock
-[female_intimate_anatomy] anal_hair
+[female_physical_descriptors] anal_hair
 [actions] belly_grab
 [metadata_and_attribution] commissioner_name
 [background_objects] makizushi
@@ -6225,7 +6225,7 @@
 [female_physical_descriptors] pear_shaped_figure
 [clothes_and_accessories] red_robe
 [clothes_and_accessories] crystal_earrings
-[female_intimate_anatomy] long_labia
+[female_physical_descriptors] long_labia
 [clothes_and_accessories] single_epaulette
 [clothes_and_accessories] blue_sports_bra
 [background_objects] napkin
@@ -7211,7 +7211,7 @@
 [standard_physical_descriptors] dog_penis
 [background_objects] wood
 [clothes_and_accessories] single_knee_pad
-[female_intimate_anatomy] erect_clitoris
+[female_physical_descriptors] erect_clitoris
 [clothes_and_accessories] pink_slippers
 [female_physical_descriptors] reptile_girl
 [poses] on_railing
@@ -8796,7 +8796,7 @@
 [actions] thumbs_down
 [two_handed_character_items] yumi_(bow)
 [poses] person_on_head
-[female_intimate_anatomy] mole_on_pussy
+[female_physical_descriptors] mole_on_pussy
 [sex_acts] immobilization
 [clothes_and_accessories] compression_shirt
 [metadata_and_attribution] country_connection
@@ -9006,7 +9006,7 @@
 [female_physical_descriptors] motoyui
 [clothes_and_accessories] stahlhelm
 [background_objects] soy_sauce
-[female_intimate_anatomy] dark_labia
+[female_physical_descriptors] dark_labia
 [background_objects] tofu
 [two_handed_character_items] mosin-nagant
 [standard_physical_descriptors] lipstick_mark_on_face
@@ -16674,7 +16674,7 @@
 [physical_locations] igloo
 [thematic_settings] crystallization
 [actions] making_faces
-[female_intimate_anatomy] blue_pussy
+[female_physical_descriptors] blue_pussy
 [actions] all-out_attack
 [format_and_presentation] shikairo_days_dance_(meme)
 [clothes_and_accessories] striped_wrist_cuffs
@@ -17233,7 +17233,7 @@
 [clothes_and_accessories] indonesian_clothes
 [actions] rapping
 [clothes_and_accessories] pink_hanfu
-[female_intimate_anatomy] huge_clitoris
+[female_physical_descriptors] huge_clitoris
 [metadata_and_attribution] kurokw_(style)
 [background_objects] ambulance
 [clothes_and_accessories] raver
@@ -19823,7 +19823,7 @@
 [background_objects] calavera
 [metadata_and_attribution] no_image
 [two_handed_character_items] steyr_iws_2000
-[female_intimate_anatomy] colored_anus
+[standard_physical_descriptors] colored_anus
 [female_physical_descriptors] very_low_bun
 [background_objects] three-wheeler
 [clothes_and_accessories] tennis_dress
@@ -19850,7 +19850,7 @@
 [two_handed_character_items] bagpipes
 [actions] petal_in_mouth
 [standard_physical_descriptors] petal_on_head
-[female_intimate_anatomy] grey_nipples
+[female_physical_descriptors] grey_nipples
 [clothes_and_accessories] ashford_academy_swimsuit
 [clothes_and_accessories] lagombi_(armor)
 [one_handed_character_items] radio_controller
@@ -19899,7 +19899,7 @@
 [physical_locations] atlantis_(fate/grand_order)
 [background_objects] birdhouse
 [metadata_and_attribution] kafuu_chino_(cosplay)
-[female_intimate_anatomy] glowing_nipples
+[female_physical_descriptors] glowing_nipples
 [expressions_and_mental_state] tasukete_eirin
 [metadata_and_attribution] shaolin_monk
 [metadata_and_attribution] okita_souji_(koha-ace)_(cosplay)
