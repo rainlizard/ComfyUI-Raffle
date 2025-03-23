@@ -39,28 +39,28 @@ class Raffle:
                 "taglists_must_include": ("STRING", {
                     "multiline": True,
                     "default": "",
-                    "tooltip": "Only selects taglists that contain ALL of these tags. WARNING: Each tag added here severely reduces the available pool of taglists. Check the 'Debug info' output to see how many taglists remain available."
+                    "tooltip": "<taglists_must_include> Only selects taglists that contain ALL of these tags. WARNING: Each tag added here severely reduces the available pool of taglists. Check the 'Debug info' output to see how many taglists remain available."
                 }),
                 "negative_prompt": ("STRING", {
                     "multiline": True,
                     "forceInput": True,
                     "default": "",
-                    "tooltip": "Removes specific tags from the final output without affecting taglist selection. Tags listed here will be filtered out after a taglist is chosen, making this safer to use than 'exclude_taglists_containing'."
+                    "tooltip": "<negative_prompt> Removes specific tags from the final output without affecting taglist selection. Tags listed here will be filtered out after a taglist is chosen, making this safer to use than 'exclude_taglists_containing'."
                 }),
                 "filter_out_tags": ("STRING", {
                     "multiline": True,
                     "default": DEFAULT_FILTER_OUT_TAGS,
-                    "tooltip": "Additional tags to filter out from the final output. Use this to exclude more tags without needing to modify your main negative prompt."
+                    "tooltip": "<filter_out_tags> Additional tags to filter out from the final output. Use this to exclude more tags without needing to modify your main negative prompt."
                 }),
                 "exclude_taglists_containing": ("STRING", {
                     "multiline": True,
                     "default": DEFAULT_EXCLUDE_TAGLISTS,
-                    "tooltip": "If ANY of these tags appear in the taglist, the entire taglist is removed from the pool of available taglists. Use with caution as each tag listed here can significantly reduce options. For removing individual tags without reducing the pool, use 'filter_out_tags' instead."
+                    "tooltip": "<exclude_taglists_containing> If ANY of these tags appear in the taglist, the entire taglist is removed from the pool of available taglists. Use with caution as each tag listed here can significantly reduce options. For removing individual tags without reducing the pool, use 'filter_out_tags' instead."
                 }),
                 "exclude_tag_categories": ("STRING", {
                     "multiline": True,
                     "default": DEFAULT_EXCLUDE_CATEGORIES,
-                    "tooltip": "Exclude entire categories of tags from the final output. Each category contains related tags (e.g., 'poses' contains all pose-related tags). View the complete category list and their tags in the 'Debug info' output. Separate multiple categories with commas."
+                    "tooltip": "<exclude_tag_categories> Exclude entire categories of tags from the final output. Each category contains related tags (e.g., 'poses' contains all pose-related tags). View the complete category list and their tags in the 'Debug info' output. Separate multiple categories with commas."
                 })
             },
         } 
@@ -320,7 +320,7 @@ class Raffle:
         filter_out_tags_set = set(self.normalize_tags(filter_out_tags))
         filtered_tags = [tag for tag in filtered_tags if tag not in filter_out_tags_set]
 
-        debug_info = f"Pool of Taglists size: {len(all_valid_taglists)}\n\n{categories_debug}"
+        debug_info = f"Taglist pool size: {len(all_valid_taglists)}\n\n{categories_debug}"
         return_values = (
             ', '.join(filtered_tags),
             unfiltered_taglist,
