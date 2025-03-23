@@ -5,9 +5,7 @@ import random
 class Raffle:
     @classmethod
     def INPUT_TYPES(s):
-        print("Initializing Raffle INPUT_TYPES")
         extension_path = os.path.normpath(os.path.dirname(__file__))
-        print(f"Extension path: {extension_path}")
         
         return {
             "required": {
@@ -67,10 +65,8 @@ class Raffle:
     
     def _load_taglist(self, filename, taglists_must_include_tags=None, exclude_tags=None, seed=0):
         """Load a line from a file, finding taglists that match required tags"""
-        print(f"Attempting to load taglist: {filename}")
         extension_path = os.path.normpath(os.path.dirname(__file__))
         filepath = os.path.join(extension_path, "lists", filename)
-        print(f"Loading from filepath: {filepath}")
         
         try:
             valid_taglists = []
@@ -103,13 +99,11 @@ class Raffle:
             return valid_taglists
                     
         except Exception as e:
-            print(f"Error loading {filename}: {str(e)}")
             raise
         
         return []
 
     def normalize_tags(self, tag_string):
-        print(f"Normalizing tag string of length: {len(tag_string)}")
         """
         Normalize a string of tags to a consistent format:
         - Convert spaces to underscores within tags
@@ -153,26 +147,17 @@ class Raffle:
                     use_general=True, use_questionable=False, use_sensitive=False, use_explicit=False,
                     exclude_categories=""):
         
-        print("\n=== Starting Raffle Process ===")
-        print(f"Process ID: {os.getpid()}")
-        print(f"Current working directory: {os.getcwd()}")
-
         # Add directory existence check
         extension_path = os.path.normpath(os.path.dirname(__file__))
         lists_path = os.path.join(extension_path, "lists")
-        print(f"Extension path: {extension_path}")
-        print(f"Lists directory path: {lists_path}")
         
         if not os.path.exists(lists_path):
-            print(f"ERROR: Lists directory not found at {lists_path}")
             raise ValueError(f"Lists directory not found at {lists_path}")
 
         # Check for categorized tags file
         categorized_tags_file_path = os.path.join(lists_path, "categorized_tags.txt")
-        print(f"Checking categorized tags file: {categorized_tags_file_path}")
         
         if not os.path.exists(categorized_tags_file_path):
-            print(f"ERROR: Categorized tags file not found at {categorized_tags_file_path}")
             raise ValueError(f"Categorized tags file not found at {categorized_tags_file_path}")
 
         # Define all available categories and handle exclusions
@@ -231,7 +216,6 @@ class Raffle:
                 error_msg = (f"Error: Invalid category names: {', '.join(invalid_categories)}. "
                             f"Please check the Debug info output for a complete list of valid categories. "
                             f"Category names may have changed in a new version.")
-                print(error_msg)
                 raise ValueError(error_msg)
         
         # Set up categories dictionary - enable all categories except excluded ones
@@ -246,7 +230,6 @@ class Raffle:
         try:
             with open(categorized_tags_file_path, 'r', encoding='utf-8') as f:
                 content = f.read()
-                print(f"Successfully read {len(content)} bytes from categorized tags file")
                 
                 for line in content.splitlines():
                     line = line.strip()
@@ -264,20 +247,13 @@ class Raffle:
                         allowed_tags.append(tag)  # Add the complete tag
                     
         except Exception as e:
-            print(f"ERROR reading categorized tags file: {str(e)}")
             raise
 
-        print(f"Loaded {len(allowed_tags)} allowed tags")
-
         # Parse exclude and include lists
-        print("Processing exclude/include lists...")
         excluded_tags = set(self.normalize_tags(exclude_taglists_containing))
         included_tags = set(self.normalize_tags(taglists_must_include))
-        print(f"Excluded tags count: {len(excluded_tags)}")
-        print(f"Included tags count: {len(included_tags)}")
 
         # Collect all valid taglists from all enabled files
-        print("Loading tag lists...")
         all_valid_taglists = []
         
         if use_general:
@@ -290,7 +266,6 @@ class Raffle:
             all_valid_taglists.extend(self._load_taglist("taglists-explicit.txt", included_tags, excluded_tags, seed))
 
         if not all_valid_taglists:
-            print("No valid taglists found in any enabled category!")
             raise ValueError("No tags available - no matching taglists found")
 
         # Use seed to shuffle and select from all valid taglists
@@ -305,47 +280,35 @@ class Raffle:
         _, unfiltered_taglist = selected_taglist
         # Normalize the unfiltered taglist for consistency in output
         unfiltered_taglist = ', '.join(self.normalize_tags(unfiltered_taglist))
-        print(f"Selected taglist: {unfiltered_taglist}")
-        print(f"Selected from {len(all_valid_taglists)} total valid taglists")
 
         # Split the taglist into individual tags and normalize them
         individual_tags = self.normalize_tags(unfiltered_taglist)
 
         # Filter tags using allowed_tags and maintain order
-        print("Filtering tags...")
         allowed_tags_set = set(allowed_tags)  # For faster lookup
         filtered_tags = [tag for tag in individual_tags if tag in allowed_tags_set]
-        print(f"Tags after allowed filter: {len(filtered_tags)}")
         
         try:
             filtered_tags.sort(key=lambda x: allowed_tags.index(x) if x in allowed_tags else len(allowed_tags))
         except Exception as e:
-            print(f"Error during sorting: {e}")
             raise
 
         # Remove excluded tags
         filtered_tags = [tag for tag in filtered_tags if tag not in excluded_tags]
-        print(f"Tags after exclusion filter: {len(filtered_tags)}")
         
         # Process negative prompt tags
-        print("Processing negative prompt...")
         negative_tags = set(self.normalize_tags(negative_prompt))
         filtered_tags = [tag for tag in filtered_tags if tag not in negative_tags]
-        print(f"Final tag count: {len(filtered_tags)}")
 
         # Process negative prompt 2 tags
-        print("Processing negative prompt 2...")
         negative_tags_2 = set(self.normalize_tags(negative_prompt_2))
         filtered_tags = [tag for tag in filtered_tags if tag not in negative_tags_2]
-        print(f"Final tag count after negative prompt 2: {len(filtered_tags)}")
 
-        print("Preparing return values...")
         debug_info = f"Pool of Taglists size: {len(all_valid_taglists)}\n\n{categories_debug}"
         return_values = (
             ', '.join(filtered_tags),
             unfiltered_taglist,
             debug_info
         )
-        print("Process complete")
         
         return return_values
