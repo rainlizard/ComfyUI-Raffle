@@ -2,6 +2,23 @@ import os
 import folder_paths
 import random
 
+# Default values for Raffle node
+DEFAULT_FILTER_OUT_TAGS = """monochrome, greyscale,
+anus, anus_peek, spread_anus, spreading_own_anus, spread_anus_under_clothes,
+anal, anal_only, after_anal, anal_fluid,
+anal_object_insertion, butt_plug, jewel_butt_plug, anal_beads,
+gaping, extreme_gaping,
+prolapse, anal_prolapse, fisting, anal_fisting,
+cross-section, cervix, cervical_penetration, uterus, internal_cumshot, x-ray,
+lactation, forced_lactation, male_lactation, projectile_lactation, lactation_through_clothes, breast_milk,
+female_pubic_hair, pubic_hair, pubic_hair_peek,
+male_focus, male_penetrated, interracial, dark-skinned_male,
+condom, used_condom, condom_wrapper, condom_in_mouth, holding_condom, condom_on_penis, multiple_condoms, condom_packet_strip, pointless_condom, condom_belt, condom_box, used_condom_on_penis, condom_left_inside, colored_condom, okamoto_condoms, condom_wrapper_in_clothes, condom_thigh_strap, buying_condoms, broken_condom, used_condom_in_clothes"""
+
+DEFAULT_EXCLUDE_TAGLISTS = "comic, 4koma, multiple_girls, multiple_boys, multiple_views, reference_sheet, 2girls, 3girls, 4girls, 5girls, 6+girls, 2boys, 3boys, 4boys, 5boys, 6+boys, gangbang, threesome, mmf_threesome, ffm_threesome, group_sex, cooperative_fellatio, cooperative_paizuri, double_handjob, surrounded_by_penises, furry, obese, yaoi, yuri, otoko_no_ko, strap-on, futa_with_female, futa_without_pussy, implied_futanari, futanari, diaper, fart, pee, peeing, pee_puddle, pee_stain, peeing_self, golden_shower, scat, guro, ero_guro, intestines, vore, horse_penis"
+
+DEFAULT_EXCLUDE_CATEGORIES = "clothes_and_accessories, female_physical_descriptors, named_garment_exposure, specific_garment_interactions, speech_and_text, standard_physical_descriptors, metadata_and_attribution, intentional_design_exposure, two_handed_character_items, holding_large_items, content_censorship_methods"
+
 class Raffle:
     @classmethod
     def INPUT_TYPES(s):
@@ -32,17 +49,17 @@ class Raffle:
                 }),
                 "filter_out_tags": ("STRING", {
                     "multiline": True,
-                    "default": "monochrome, greyscale",
+                    "default": DEFAULT_FILTER_OUT_TAGS,
                     "tooltip": "Additional tags to filter out from the final output. Use this to exclude more tags without needing to modify your main negative prompt."
                 }),
                 "exclude_taglists_containing": ("STRING", {
                     "multiline": True,
-                    "default": "comic, 4koma, multiple_girls, multiple_boys, multiple_views, reference_sheet, 2girls, 3girls, 4girls, 5girls, 6+girls, 2boys, 3boys, 4boys, 5boys, 6+boys, gangbang, furry, yaoi, yuri, otoko_no_ko, strap-on, futa_with_female, futa_without_pussy, implied_futanari, futanari, diaper, fart, scat, guro, vore, horse_penis, prolapse, anal_prolapse, pee, peeing, pee puddle, pee stain",
+                    "default": DEFAULT_EXCLUDE_TAGLISTS,
                     "tooltip": "If ANY of these tags appear in the taglist, the entire taglist is removed from the pool of available taglists. Use with caution as each tag listed here can significantly reduce options. For removing individual tags without reducing the pool, use 'filter_out_tags' instead."
                 }),
                 "exclude_tag_categories": ("STRING", {
                     "multiline": True,
-                    "default": "clothes_and_accessories, female_physical_descriptors, named_garment_exposure, specific_garment_interactions, speech_and_text, standard_physical_descriptors, metadata_and_attribution, intentional_design_exposure, two_handed_character_items, holding_large_items, content_censorship_methods",
+                    "default": DEFAULT_EXCLUDE_CATEGORIES,
                     "tooltip": "Exclude entire categories of tags from the final output. Each category contains related tags (e.g., 'poses' contains all pose-related tags). View the complete category list and their tags in the 'Debug info' output. Separate multiple categories with commas."
                 })
             },
