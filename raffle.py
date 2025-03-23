@@ -34,7 +34,7 @@ class Raffle:
                 }),
                 "negative_prompt_2": ("STRING", {
                     "multiline": True,
-                    "default": "censored, mosaic_censoring, bar_censor",
+                    "default": "monochrome, greyscale",
                     "tooltip": "Additional tags to filter from the final output. Combined with negative_prompt tags to avoid having to put all filtering tags in your main negative prompt."
                 }),
                 "exclude_taglists_containing": ("STRING", {
@@ -45,7 +45,7 @@ class Raffle:
                 # Replace all individual category booleans with a single text field for excluded categories
                 "exclude_categories": ("STRING", {
                     "multiline": True,
-                    "default": "clothes_and_accessories, female_physical_descriptors, named_garment_exposure, specific_garment_interactions, speech_and_text, standard_physical_descriptors, metadata_and_attribution, intentional_design_exposure, two_handed_character_items, holding_large_items, color_scheme",
+                    "default": "clothes_and_accessories, female_physical_descriptors, named_garment_exposure, specific_garment_interactions, speech_and_text, standard_physical_descriptors, metadata_and_attribution, intentional_design_exposure, two_handed_character_items, holding_large_items, content_censorship_methods",
                     "tooltip": "Enter category names to exclude, separated by commas. The complete list of available categories can be seen in the 'Debug info' output."
                 })
             },
