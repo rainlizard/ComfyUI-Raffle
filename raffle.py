@@ -22,29 +22,28 @@ class Raffle:
                 "taglists_must_include": ("STRING", {
                     "multiline": True,
                     "default": "",
-                    "tooltip": "Drastically reduces the pool of available taglists. Only taglists containing ALL these tags will be considered for selection. Use sparingly as this can quickly limit options."
+                    "tooltip": "Only selects taglists that contain ALL of these tags. WARNING: Each tag added here severely reduces the available pool of taglists. Check the 'Debug info' output to see how many taglists remain available."
                 }),
                 "negative_prompt": ("STRING", {
                     "multiline": True,
                     "forceInput": True,
                     "default": "",
-                    "tooltip": "Filters individual tags from the selected taglist (doesn't exclude entire taglists). Tags listed here won't appear in the 'Filtered tags' output."
+                    "tooltip": "Removes specific tags from the final output without affecting taglist selection. Tags listed here will be filtered out after a taglist is chosen, making this safer to use than 'exclude_taglists_containing'."
                 }),
-                "negative_prompt_2": ("STRING", {
+                "filter_out_tags": ("STRING", {
                     "multiline": True,
                     "default": "monochrome, greyscale",
-                    "tooltip": "Additional tags to filter from the final output. Combined with negative_prompt tags to avoid having to put all filtering tags in your main negative prompt."
+                    "tooltip": "Additional tags to filter out from the final output. Use this to exclude more tags without needing to modify your main negative prompt."
                 }),
                 "exclude_taglists_containing": ("STRING", {
                     "multiline": True,
-                    "default": "comic, 4koma, multiple_girls, multiple_boys, multiple_views, reference_sheet, 2girls, 3girls, 4girls, 5girls, 6+girls, 2boys, 3boys, 4boys, 5boys, 6+boys, gangbang, furry, obese, yaoi, yuri, otoko_no_ko, strap-on, futa_with_female, futa_without_pussy, implied_futanari, futanari, diaper, fart, pee, peeing, scat, guro, vore, horse_penis, prolapse, anal_prolapse",
-                    "tooltip": "Eliminates entire taglists containing any of these tags from the selection pool. Use for tags that make the whole taglist unusable rather than just removing individual tags."
+                    "default": "comic, 4koma, multiple_girls, multiple_boys, multiple_views, reference_sheet, 2girls, 3girls, 4girls, 5girls, 6+girls, 2boys, 3boys, 4boys, 5boys, 6+boys, gangbang, furry, yaoi, yuri, otoko_no_ko, strap-on, futa_with_female, futa_without_pussy, implied_futanari, futanari, diaper, fart, scat, guro, vore, horse_penis, prolapse, anal_prolapse, pee, peeing, pee puddle, pee stain",
+                    "tooltip": "If ANY of these tags appear in the taglist, the entire taglist is removed from the pool of available taglists. Use with caution as each tag listed here can significantly reduce options. For removing individual tags without reducing the pool, use 'filter_out_tags' instead."
                 }),
-                # Replace all individual category booleans with a single text field for excluded categories
-                "exclude_categories": ("STRING", {
+                "exclude_tag_categories": ("STRING", {
                     "multiline": True,
                     "default": "clothes_and_accessories, female_physical_descriptors, named_garment_exposure, specific_garment_interactions, speech_and_text, standard_physical_descriptors, metadata_and_attribution, intentional_design_exposure, two_handed_character_items, holding_large_items, content_censorship_methods",
-                    "tooltip": "Enter category names to exclude, separated by commas. The complete list of available categories can be seen in the 'Debug info' output."
+                    "tooltip": "Exclude entire categories of tags from the final output. Each category contains related tags (e.g., 'poses' contains all pose-related tags). View the complete category list and their tags in the 'Debug info' output. Separate multiple categories with commas."
                 })
             },
         } 
@@ -143,9 +142,9 @@ class Raffle:
         ]
 
     def process_tags(self, exclude_taglists_containing, taglists_must_include, seed,
-                    negative_prompt="", negative_prompt_2="",
+                    negative_prompt="", filter_out_tags="",
                     use_general=True, use_questionable=False, use_sensitive=False, use_explicit=False,
-                    exclude_categories=""):
+                    exclude_tag_categories=""):
         
         # Add directory existence check
         extension_path = os.path.normpath(os.path.dirname(__file__))
@@ -207,8 +206,8 @@ class Raffle:
         
         # Process excluded categories
         excluded_categories = []
-        if exclude_categories.strip():
-            excluded_categories = self.normalize_tags(exclude_categories)
+        if exclude_tag_categories.strip():
+            excluded_categories = self.normalize_tags(exclude_tag_categories)
             
             # Check if all excluded categories are valid
             invalid_categories = [c for c in excluded_categories if c not in all_categories]
@@ -301,8 +300,8 @@ class Raffle:
         filtered_tags = [tag for tag in filtered_tags if tag not in negative_tags]
 
         # Process negative prompt 2 tags
-        negative_tags_2 = set(self.normalize_tags(negative_prompt_2))
-        filtered_tags = [tag for tag in filtered_tags if tag not in negative_tags_2]
+        filter_out_tags_set = set(self.normalize_tags(filter_out_tags))
+        filtered_tags = [tag for tag in filtered_tags if tag not in filter_out_tags_set]
 
         debug_info = f"Pool of Taglists size: {len(all_valid_taglists)}\n\n{categories_debug}"
         return_values = (
