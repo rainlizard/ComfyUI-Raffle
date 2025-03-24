@@ -1,4 +1,4 @@
 Some notes about these files: explicit.txt, general.txt, questionable.txt, sensitive.txt
 Within those files, the first value is the 'post_id' (which you see in the URL of each danbooru image) and the second value is the 'score', I sorted the lines by score but this doesn't affect anything.
 These were scraped slightly randomly with emphasize put on images that have higher scores.
-The scraper's only other rule was to avoid images with the "animated" tag, since they I doubt their taglist would fit a static image.
+The scraper's only other rule was to avoid images with the "animated" tag, since I doubt their taglist would fit a static image.
