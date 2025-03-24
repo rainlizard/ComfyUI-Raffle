@@ -1,20 +1,91 @@
-A semi-random prompt generator for danbooru tags, designed to work with your character prompts. (Illustrious/Pony)
+# Raffle
 
-Definitions
+A semi-random prompt generator for danbooru tags that works alongside your character prompts, allowing you to put your waifu in many situations. Made for Illustrious/Pony and any models supporting danbooru prompting.
 
-`taglist`: If you open an image on the danbooru website you will see a list of tags on the left-hand side that have been applied to that specific image, this is what we're calling the taglist - a grouping of multiple tags.
+## Quick Start
 
-`pool of taglists`: Inside the `/lists/` directory you will find files called `general.txt`, `questionable.txt`, `sensitive.txt`, `explicit.txt`. Each one of these files contains 100,000 lines, and each line contains a list of tags. This 100,000 number is the entire pool of taglists and this pool is filtered by: `taglists_must_include` and `exclude_taglists_containing`.
+1. Add the Raffle node to your workflow
+2. Connect your Negative Prompt to the "negative_prompt" input (you may need to convert it to a `text` node first)
+3. Use the "Filtered tags" output in your Positive Prompt (merge it with a `text concat` or `string concat` node)
 
-The way this prompt generator works is it filters the pool of taglists and then filters the taglist itself.
-Here's some instructions on how the fields work.
+See the included workflow examples for detailed implementation.
 
-`taglists_must_include`: this will reduce the pool of taglists, as each word written here must be in the taglist. So if you write a bunch of tags here, the pool will become very small very quickly. You should leave this blank unless you're wanting a specific output.
+## How It Works
 
-`negative_prompt`: wire in your usual negative prompt here, so that we can be sure to that none of the tags in your negative prompt appear in the "Filtered Tags" output.
+Danbooru is an image booru site where images are tagged with descriptive terms. For offline use, 400,000 of these taglists have been scraped into files: `general.txt`, `questionable.txt`, `sensitive.txt`, `explicit.txt`. Raffle randomly selects from these taglists, filters them according to your preferences, and provides the resulting tags for your prompt.
 
-`negative_prompt_2`: This field is just for convenience and will be combined with your negative_prompt. You can filter out more tags here, instead of needing to fill up your main negative_prompt with hundreds of tags.
+### Selection Process
+1. Raffle first filters the pool of available taglists based on:
+   - `use_general`, `use_questionable`, `use_sensitive`, `use_explicit`
+   - `exclude_taglists_containing`
+   - `taglists_must_include`
+   - `exclude_tag_categories`
+2. It randomly selects one taglist from this filtered pool using your provided seed
+3. That selected taglist is then filtered by:
+   - `negative_prompt`
+   - `filter_out_tags`
+   - if the tag isn't even in `categorized_tags.txt` then it's also filtered
+4. The final result is the `Filtered tags` output. You can use this in your Positive Prompt.
 
-`exclude_taglists_containing`: The reason you would write tags here instead of negative_prompt_2 is because filtering the individual tag may not be enough, you may want to throw out the entire taglist instead, if you believe the presence of the tag ruins the whole taglist.
+## Node Options
+- **use_general**: Enable selection from general.txt which contains 100,000 general taglists
+- **use_questionable**: Enable selection from questionable.txt which contains 100,000 questionable taglists
+- **use_sensitive**: Enable selection from sensitive.txt which contains 100,000 sensitive taglists
+- **use_explicit**: Enable selection from explicit.txt which contains 100,000 explicit taglists
+- **seed**: Controls which taglist is randomly selected from the filtered pool
+- **taglists_must_include**: Only selects taglists that contain ALL of these tags. Use sparingly as each tag added severely reduces the available pool of taglists.
+- **negative_prompt**: Connect your existing negative prompt here to ensure none of those tags appear in the output
+- **filter_out_tags**: Additional tags to filter out from the final output without modifying your main negative prompt
+- **exclude_taglists_containing**: If ANY of these tags appear in a taglist, the entire taglist is removed from consideration. Use with caution as this can significantly reduce options.
+- **exclude_tag_categories**: Exclude entire categories of tags (e.g., "clothes_and_accessories", "standard_physical_descriptors") from the final output
 
-Note: this custom node's biggest limitation right now is it has only categorized 6568 tags, you can find this file in `/lists/categorized_tags.txt` and only tags in this list will appear in your output. More obscure tags will not appear in your outputs.
+## Node Outputs
+- **Filtered tags**: The final list of tags ready to use in your prompt
+- **Unfiltered tags**: The complete original taglist before filtering (for debugging)
+- **Debug info**: Information about the selection process, including available taglist count
+
+## Categories
+
+I've used AI to help categorize 20,000 tags in `categorized_tags.txt`, this includes any tag with more than 100 entries on danbooru. The categorization method isn't perfect, but it's what I've ended up with:
+
+- `abstract_symbols`
+- `actions`
+- `artstyle_technique`
+- `background_objects`
+- `bodily_fluids`
+- `camera_angle_perspective`
+- `camera_focus_subject`
+- `camera_framing_composition`
+- `character_count`
+- `clothes_and_accessories`
+- `color_scheme`
+- `content_censorship_methods`
+- `expressions_and_mental_state`
+- `female_intimate_anatomy`
+- `female_physical_descriptors`
+- `format_and_presentation`
+- `gaze_direction_and_eye_contact`
+- `general_clothing_exposure`
+- `generic_clothing_interactions`
+- `holding_large_items`
+- `holding_small_items`
+- `intentional_design_exposure`
+- `lighting_and_vfx`
+- `male_intimate_anatomy`
+- `male_physical_descriptors`
+- `metadata_and_attribution`
+- `named_garment_exposure`
+- `nudity_and_absence_of_clothing`
+- `one_handed_character_items`
+- `physical_locations`
+- `poses`
+- `publicly_visible_anatomy`
+- `relationships`
+- `sex_acts`
+- `sfw_clothed_anatomy`
+- `special_backgrounds`
+- `specific_garment_interactions`
+- `speech_and_text`
+- `standard_physical_descriptors`
+- `thematic_settings`
+- `two_handed_character_items`
