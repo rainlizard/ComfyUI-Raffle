@@ -11,7 +11,7 @@ gaping, extreme_gaping,
 prolapse, anal_prolapse, fisting, anal_fisting,
 anal, anal_only, after_anal, anal_fluid,
 anal_object_insertion, butt_plug, jewel_butt_plug, anal_beads, vibrator_in_anus,
-anus, cum_in_ass, spread_anus, anus_peek, puckered_anus, dark_anus, presenting_anus, spreading_own_anus, anus_cutout, censored_anus, spread_anus_under_clothes, colored_anus,
+anus, cum_in_ass, spread_anus, spread_ass, anus_peek, puckered_anus, dark_anus, presenting_anus, spreading_own_anus, anus_cutout, censored_anus, spread_anus_under_clothes, colored_anus,
 pubic_hair, female_pubic_hair, pubic_hair_peek, colored_pubic_hair, sparse_pubic_hair, mismatched_pubic_hair, excessive_pubic_hair, shaped_pubic_hair,
 condom, used_condom, condom_wrapper, condom_in_mouth, holding_condom, condom_on_penis, multiple_condoms, condom_packet_strip, pointless_condom, condom_belt, condom_box, used_condom_on_penis, condom_left_inside, colored_condom, okamoto_condoms, condom_wrapper_in_clothes, condom_thigh_strap, buying_condoms, broken_condom, used_condom_in_clothes,
 """
@@ -19,6 +19,8 @@ condom, used_condom, condom_wrapper, condom_in_mouth, holding_condom, condom_on_
 DEFAULT_EXCLUDE_TAGLISTS = "comic, 4koma, multiple_girls, multiple_boys, multiple_views, reference_sheet, 2girls, 3girls, 4girls, 5girls, 6+girls, 2boys, 3boys, 4boys, 5boys, 6+boys, gangbang, threesome, mmf_threesome, ffm_threesome, group_sex, cooperative_fellatio, cooperative_paizuri, double_handjob, surrounded_by_penises, furry, obese, yaoi, yuri, otoko_no_ko, strap-on, futa_with_female, futa_without_pussy, implied_futanari, futanari, diaper, fart, pee, peeing, pee_puddle, pee_stain, peeing_self, golden_shower, scat, guro, ero_guro, intestines, vore, horse_penis"
 
 DEFAULT_EXCLUDE_CATEGORIES = "clothes_and_accessories, female_physical_descriptors, named_garment_exposure, specific_garment_interactions, speech_and_text, standard_physical_descriptors, metadata_and_attribution, intentional_design_exposure, two_handed_character_items, holding_large_items, content_censorship_methods"
+
+DEFAULT_TAGLISTS_MUST_INCLUDE = "1girl"
 
 class Raffle:
     @classmethod
@@ -39,7 +41,7 @@ class Raffle:
                 "use_explicit": ("BOOLEAN", {"default": True, "tooltip": "Enable selection from explicit.txt which contains 100,000 explicit taglists"}),
                 "taglists_must_include": ("STRING", {
                     "multiline": True,
-                    "default": "",
+                    "default": DEFAULT_TAGLISTS_MUST_INCLUDE,
                     "tooltip": "<taglists_must_include> Only selects taglists that contain ALL of these tags. WARNING: Each tag added here severely reduces the available pool of taglists. Check the 'Debug info' output to see how many taglists remain available."
                 }),
                 "negative_prompt": ("STRING", {
@@ -239,7 +241,7 @@ class Raffle:
         categories = {category: (category not in excluded_categories) for category in all_categories}
         
         # Create the categories debug output
-        categories_debug = "Available categories:\n" + "\n".join(all_categories)
+        categories_debug = "-- List of Categories --\n" + "\n".join(all_categories)
         
         # Load categorized tags with error handling
         allowed_tags = []  # Changed from set to list to preserve order

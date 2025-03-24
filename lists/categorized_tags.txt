@@ -3484,7 +3484,7 @@
 [speech_and_text] spoken_interrobang
 [actions] hand_on_another's_thigh
 [actions] swimming
-[sex_acts] gloved_handjob
+[specific_garment_interactions] gloved_handjob
 [content_censorship_methods] novelty_censor
 [background_objects] seagull
 [clothes_and_accessories] two-sided_jacket
@@ -5857,7 +5857,7 @@
 [holding_small_items] holding_megaphone
 [one_handed_character_items] crime_prevention_buzzer
 [background_objects] campfire
-[sex_acts] tail_grab
+[actions] tail_grab
 [abstract_symbols] ankh
 [clothes_and_accessories] wrist_bow
 [clothes_and_accessories] frilled_wrist_cuffs
@@ -11209,7 +11209,7 @@
 [clothes_and_accessories] spiked_knuckles
 [standard_physical_descriptors] cashier
 [sex_acts] foreskin_pull
-[sex_acts] fellatio_under_mask
+[specific_garment_interactions] fellatio_under_mask
 [standard_physical_descriptors] half-harpy
 [one_handed_character_items] detonator
 [camera_framing_composition] penis_out_of_frame
@@ -11795,7 +11795,7 @@
 [sex_acts] yukadon
 [expressions_and_mental_state] fainted
 [poses] plank
-[sex_acts] hand_under_skirt
+[specific_garment_interactions] hand_under_skirt
 [relationships] grandfather_and_granddaughter
 [standard_physical_descriptors] cheetah_ears
 [one_handed_character_items] creamer_(vessel)
@@ -12535,7 +12535,7 @@
 [background_objects] seahorse
 [clothes_and_accessories] striped_camisole
 [clothes_and_accessories] feather-trimmed_jacket
-[sex_acts] head_under_skirt
+[specific_garment_interactions] head_under_skirt
 [clothes_and_accessories] flannel
 [female_physical_descriptors] long_nipples
 [thematic_settings] heian
@@ -17509,7 +17509,7 @@
 [metadata_and_attribution] 1996
 [metadata_and_attribution] ghost_in_the_shell_lineup
 [standard_physical_descriptors] brushing_tail
-[sex_acts] hand_in_bikini
+[specific_garment_interactions] hand_in_bikini
 [holding_small_items] holding_jug
 [sex_acts] penetration_while_penetrated
 [two_handed_character_items] escudo_sword_(rayearth)
