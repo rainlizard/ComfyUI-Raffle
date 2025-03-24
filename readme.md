@@ -1,14 +1,15 @@
 # Raffle
 
-A semi-random prompt generator for danbooru tags that works alongside your character prompt, allowing you to put your waifu in many scenarios. Made for Illustrious/NoobAI/Pony, any models supporting tag prompting.
+A semi-random prompt generator for danbooru tags that works alongside your character prompt, allowing you to put your waifu in many scenarios. Made for Illustrious/NoobAI/Pony, or any models supporting tag prompting.
 
 ## Quick Start
 
-1. Add the Raffle node to your workflow
-2. Connect your Negative Prompt to the "negative_prompt" input (you may need to convert it to a `text` node first)
-3. Use the "Filtered tags" output in your Positive Prompt (merge it with a `text concat` or `string concat` node)
+1. From within ComfyUI Manager, search for Raffle and install it
+2. Add the Raffle node to your workflow
+3. Connect your Negative Prompt to the "negative_prompt" input (you may need to convert it to a `text` node first)
+4. Use the "Filtered tags" output in your Positive Prompt (merge it with a `text concat` or `string concat` node)
 
-See the included workflow examples for detailed implementation.
+Download the workflow example for detailed implementation: [Raffle Example.json](https://github.com/rainlizard/ComfyUI-Raffle/blob/main/Raffle%20Example.json)
 
 ## How It Works
 
