@@ -9,7 +9,7 @@ A semi-random prompt generator for danbooru tags that works alongside your chara
 3. Connect your Negative Prompt to the "negative_prompt" input (you may need to convert it to a `text` node first)
 4. Use the "Filtered tags" output in your Positive Prompt (merge it with a `text concat` or `string concat` node)
 
-Download the workflow example for detailed implementation: [Raffle Example.json](https://raw.githubusercontent.com/rainlizard/ComfyUI-Raffle/main/Raffle%20Example.json)
+Download the workflow example for detailed implementation: [Raffle Example.json](https://github.com/rainlizard/ComfyUI-Raffle/blob/main/Raffle%20Example.json)
 
 ## How It Works
 
