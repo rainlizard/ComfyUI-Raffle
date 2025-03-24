@@ -12,7 +12,7 @@ See the included workflow examples for detailed implementation.
 
 ## How It Works
 
-Danbooru is an image booru site where images are tagged with descriptive terms. For offline use, 400,000 of these taglists have been scraped into files: `general.txt`, `questionable.txt`, `sensitive.txt`, `explicit.txt`. Raffle randomly selects from these taglists, filters them according to your preferences, and provides the resulting tags for your prompt.
+For offline use 400,000 taglists have been scraped from danbooru. Raffle randomly selects one of these taglists and filters it according to your preferences. A taglist is a collection of tags that have been applied to one image on danbooru, by using taglists we can be certain that the tags have good synergy with each other.
 
 ### Selection Process
 1. Raffle first filters the pool of available taglists based on:
