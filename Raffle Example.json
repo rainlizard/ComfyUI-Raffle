@@ -1,0 +1,868 @@
+{
+  "id": "f3c9d3a7-20c3-4021-b58a-d02d0ff544a4",
+  "revision": 0,
+  "last_node_id": 36,
+  "last_link_id": 45,
+  "nodes": [
+    {
+      "id": 27,
+      "type": "CLIPTextEncode",
+      "pos": [
+        -20,
+        30
+      ],
+      "size": [
+        210,
+        58
+      ],
+      "flags": {},
+      "order": 10,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 27
+        },
+        {
+          "name": "text",
+          "type": "STRING",
+          "widget": {
+            "name": "text"
+          },
+          "link": 38
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            30
+          ]
+        }
+      ],
+      "title": "CLIP Text Encode (Pos)",
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.27",
+        "Node name for S&R": "CLIPTextEncode"
+      },
+      "widgets_values": [
+        ""
+      ]
+    },
+    {
+      "id": 20,
+      "type": "CR Text",
+      "pos": [
+        -1440,
+        340
+      ],
+      "size": [
+        610,
+        180
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "text",
+          "type": "*",
+          "links": [
+            18,
+            42
+          ]
+        },
+        {
+          "name": "show_help",
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "title": "Negative Prompt",
+      "properties": {
+        "cnr_id": "comfyroll",
+        "ver": "d78b780ae43fcf8c6b7c6505e6ffb4584281ceca",
+        "Node name for S&R": "CR Text"
+      },
+      "widgets_values": [
+        "3d,\nbad hands, extra digits, fewer digits,\nworst quality, bad quality, low quality,\nvery displeasing, displeasing, bad anatomy, artistic error, worst detail, worst aesthetic,\nsketch, lowres, scan artifacts, old,\n4koma, multiple views, reference sheet, multiple girls, multiple boys, multiple penises,\nanus, censored, dark-skinned male,\nwatermark, logo, signature, artist name, artist sign,"
+      ]
+    },
+    {
+      "id": 19,
+      "type": "CR Text",
+      "pos": [
+        -990,
+        -220
+      ],
+      "size": [
+        600,
+        130
+      ],
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "text",
+          "type": "*",
+          "links": [
+            35
+          ]
+        },
+        {
+          "name": "show_help",
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "title": "Character Prompt (Positive)",
+      "properties": {
+        "cnr_id": "comfyroll",
+        "ver": "d78b780ae43fcf8c6b7c6505e6ffb4584281ceca",
+        "Node name for S&R": "CR Text"
+      },
+      "widgets_values": [
+        "saber, blonde hair, black skirt, black shirt"
+      ]
+    },
+    {
+      "id": 32,
+      "type": "easy showAnything",
+      "pos": [
+        -330,
+        0
+      ],
+      "size": [
+        210,
+        200
+      ],
+      "flags": {},
+      "order": 9,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "anything",
+          "shape": 7,
+          "type": "*",
+          "link": 39
+        }
+      ],
+      "outputs": [
+        {
+          "name": "output",
+          "type": "*",
+          "links": null
+        }
+      ],
+      "title": "Show Debug Info",
+      "properties": {
+        "cnr_id": "comfyui-easy-use",
+        "ver": "1.2.7",
+        "Node name for S&R": "easy showAnything"
+      },
+      "widgets_values": [
+        "Taglist pool size: 146797\n\n-- List of Categories --\nabstract_symbols\nactions\nartstyle_technique\nbackground_objects\nbodily_fluids\ncamera_angle_perspective\ncamera_focus_subject\ncamera_framing_composition\ncharacter_count\nclothes_and_accessories\ncolor_scheme\ncontent_censorship_methods\nexpressions_and_mental_state\nfemale_intimate_anatomy\nfemale_physical_descriptors\nformat_and_presentation\ngaze_direction_and_eye_contact\ngeneral_clothing_exposure\ngeneric_clothing_interactions\nholding_large_items\nholding_small_items\nintentional_design_exposure\nlighting_and_vfx\nmale_intimate_anatomy\nmale_physical_descriptors\nmetadata_and_attribution\nnamed_garment_exposure\nnudity_and_absence_of_clothing\none_handed_character_items\nphysical_locations\nposes\npublicly_visible_anatomy\nrelationships\nsex_acts\nsfw_clothed_anatomy\nspecial_backgrounds\nspecific_garment_interactions\nspeech_and_text\nstandard_physical_descriptors\nthematic_settings\ntwo_handed_character_items"
+      ]
+    },
+    {
+      "id": 34,
+      "type": "CLIPTextEncode",
+      "pos": [
+        -20,
+        140
+      ],
+      "size": [
+        210,
+        58
+      ],
+      "flags": {},
+      "order": 6,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 43
+        },
+        {
+          "name": "text",
+          "type": "STRING",
+          "widget": {
+            "name": "text"
+          },
+          "link": 42
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            44
+          ]
+        }
+      ],
+      "title": "CLIP Text Encode (Neg)",
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.27",
+        "Node name for S&R": "CLIPTextEncode"
+      },
+      "widgets_values": [
+        ""
+      ]
+    },
+    {
+      "id": 5,
+      "type": "EmptyLatentImage",
+      "pos": [
+        -20,
+        250
+      ],
+      "size": [
+        210,
+        106
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "slot_index": 0,
+          "links": [
+            2
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.27",
+        "Node name for S&R": "EmptyLatentImage"
+      },
+      "widgets_values": [
+        1024,
+        1024,
+        1
+      ]
+    },
+    {
+      "id": 8,
+      "type": "VAEDecode",
+      "pos": [
+        520,
+        30
+      ],
+      "size": [
+        140,
+        46
+      ],
+      "flags": {},
+      "order": 13,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "samples",
+          "type": "LATENT",
+          "link": 7
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": 8
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "slot_index": 0,
+          "links": [
+            9
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.27",
+        "Node name for S&R": "VAEDecode"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 9,
+      "type": "SaveImage",
+      "pos": [
+        680,
+        30
+      ],
+      "size": [
+        570,
+        580
+      ],
+      "flags": {},
+      "order": 14,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 9
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.27",
+        "Node name for S&R": "SaveImage"
+      },
+      "widgets_values": [
+        "ComfyUI"
+      ]
+    },
+    {
+      "id": 29,
+      "type": "Text Concatenate",
+      "pos": [
+        -330,
+        -310
+      ],
+      "size": [
+        210,
+        178
+      ],
+      "flags": {},
+      "order": 7,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "text_a",
+          "shape": 7,
+          "type": "STRING",
+          "widget": {
+            "name": "text_a"
+          },
+          "link": 34
+        },
+        {
+          "name": "text_b",
+          "shape": 7,
+          "type": "STRING",
+          "widget": {
+            "name": "text_b"
+          },
+          "link": 35
+        },
+        {
+          "name": "text_c",
+          "shape": 7,
+          "type": "STRING",
+          "widget": {
+            "name": "text_c"
+          },
+          "link": 36
+        },
+        {
+          "name": "text_d",
+          "shape": 7,
+          "type": "STRING",
+          "widget": {
+            "name": "text_d"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            38,
+            40
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "was-node-suite-comfyui",
+        "ver": "1.0.2",
+        "Node name for S&R": "Text Concatenate"
+      },
+      "widgets_values": [
+        ", ",
+        "true",
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "id": 4,
+      "type": "CheckpointLoaderSimple",
+      "pos": [
+        -380,
+        480
+      ],
+      "size": [
+        330,
+        98
+      ],
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "slot_index": 0,
+          "links": [
+            1
+          ]
+        },
+        {
+          "name": "CLIP",
+          "type": "CLIP",
+          "slot_index": 1,
+          "links": [
+            3,
+            27,
+            43
+          ]
+        },
+        {
+          "name": "VAE",
+          "type": "VAE",
+          "slot_index": 2,
+          "links": [
+            8
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.27",
+        "Node name for S&R": "CheckpointLoaderSimple"
+      },
+      "widgets_values": [
+        "illustrious\\waiNSFWIllustrious_v120.safetensors"
+      ]
+    },
+    {
+      "id": 3,
+      "type": "KSampler",
+      "pos": [
+        230,
+        30
+      ],
+      "size": [
+        270,
+        262
+      ],
+      "flags": {},
+      "order": 12,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 1
+        },
+        {
+          "name": "positive",
+          "type": "CONDITIONING",
+          "link": 30
+        },
+        {
+          "name": "negative",
+          "type": "CONDITIONING",
+          "link": 44
+        },
+        {
+          "name": "latent_image",
+          "type": "LATENT",
+          "link": 2
+        }
+      ],
+      "outputs": [
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "slot_index": 0,
+          "links": [
+            7
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.27",
+        "Node name for S&R": "KSampler"
+      },
+      "widgets_values": [
+        0,
+        "increment",
+        32,
+        7,
+        "euler_ancestral",
+        "sgm_uniform",
+        1
+      ]
+    },
+    {
+      "id": 11,
+      "type": "Raffle",
+      "pos": [
+        -790,
+        -40
+      ],
+      "size": [
+        400,
+        488
+      ],
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "negative_prompt",
+          "type": "STRING",
+          "widget": {
+            "name": "negative_prompt"
+          },
+          "link": 18
+        }
+      ],
+      "outputs": [
+        {
+          "name": "Filtered tags",
+          "type": "STRING",
+          "links": [
+            19,
+            36,
+            45
+          ]
+        },
+        {
+          "name": "Unfiltered tags",
+          "type": "STRING",
+          "links": null
+        },
+        {
+          "name": "Debug info",
+          "type": "STRING",
+          "links": [
+            39
+          ]
+        }
+      ],
+      "properties": {
+        "aux_id": "rainlizard/ComfyUI-Raffle",
+        "ver": "249166dcf2f654b240b7d84dbae37b48413148c2",
+        "Node name for S&R": "Raffle"
+      },
+      "widgets_values": [
+        0,
+        "increment",
+        false,
+        false,
+        true,
+        true,
+        "1girl",
+        "",
+        "monochrome, greyscale,\ncross-section, cervix, cervical_penetration, uterus, x-ray, internal_cumshot,\nanal_object_insertion, butt_plug, jewel_butt_plug, anal_beads,\nanus, anus_peek, spread_anus, spread_ass, spreading_own_anus, spread_anus_under_clothes,\nanal, anal_only, after_anal, anal_fluid,\ngaping, extreme_gaping,\nprolapse, anal_prolapse, fisting, anal_fisting,\nlactation, forced_lactation, male_lactation, projectile_lactation, lactation_through_clothes, breast_milk,\nfemale_pubic_hair, pubic_hair, pubic_hair_peek,\nmale_focus, male_penetrated, interracial, dark-skinned_male,\ncondom, used_condom, condom_wrapper, condom_in_mouth, holding_condom, condom_on_penis, multiple_condoms, condom_packet_strip, pointless_condom, condom_belt, condom_box, used_condom_on_penis, condom_left_inside, colored_condom, okamoto_condoms, condom_wrapper_in_clothes, condom_thigh_strap, buying_condoms, broken_condom, used_condom_in_clothes",
+        "comic, 4koma, multiple_girls, multiple_boys, multiple_views, reference_sheet, 2girls, 3girls, 4girls, 5girls, 6+girls, 2boys, 3boys, 4boys, 5boys, 6+boys, gangbang, threesome, mmf_threesome, ffm_threesome, group_sex, cooperative_fellatio, cooperative_paizuri, double_handjob, surrounded_by_penises, furry, obese, yaoi, yuri, otoko_no_ko, strap-on, futa_with_female, futa_without_pussy, implied_futanari, futanari, diaper, fart, pee, peeing, pee_puddle, pee_stain, peeing_self, golden_shower, scat, guro, ero_guro, intestines, vore, horse_penis",
+        "clothes_and_accessories, female_physical_descriptors, named_garment_exposure, specific_garment_interactions, speech_and_text, standard_physical_descriptors, metadata_and_attribution, intentional_design_exposure, two_handed_character_items, holding_large_items, content_censorship_methods"
+      ]
+    },
+    {
+      "id": 28,
+      "type": "CR Text",
+      "pos": [
+        -990,
+        -410
+      ],
+      "size": [
+        600,
+        140
+      ],
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "text",
+          "type": "*",
+          "links": [
+            34
+          ]
+        },
+        {
+          "name": "show_help",
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "title": "Quality Prompt (Positive)",
+      "properties": {
+        "cnr_id": "comfyroll",
+        "ver": "d78b780ae43fcf8c6b7c6505e6ffb4584281ceca",
+        "Node name for S&R": "CR Text"
+      },
+      "widgets_values": [
+        "very awa, best quality, masterpiece, highres, absurdres, very aesthetic, ultra-detailed, newest, hetero, high resolution, official style, detailed background, detailed face, detailed eyes, afterimage, motion lines"
+      ]
+    },
+    {
+      "id": 36,
+      "type": "easy showAnything",
+      "pos": [
+        -50,
+        -440
+      ],
+      "size": [
+        410,
+        180
+      ],
+      "flags": {},
+      "order": 8,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "anything",
+          "shape": 7,
+          "type": "*",
+          "link": 45
+        }
+      ],
+      "outputs": [
+        {
+          "name": "output",
+          "type": "*",
+          "links": null
+        }
+      ],
+      "title": "Show Filtered Tags (Partial Prompt)",
+      "properties": {
+        "cnr_id": "comfyui-easy-use",
+        "ver": "1.2.7",
+        "Node name for S&R": "easy showAnything"
+      },
+      "widgets_values": [
+        "1girl, breasts, blush, open_mouth, 1boy, heart, hetero, penis, sex, vaginal, pov, groping, grabbing_another's_breast, heavy_breathing"
+      ]
+    },
+    {
+      "id": 33,
+      "type": "easy showAnything",
+      "pos": [
+        -50,
+        -210
+      ],
+      "size": [
+        410,
+        180
+      ],
+      "flags": {},
+      "order": 11,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "anything",
+          "shape": 7,
+          "type": "*",
+          "link": 40
+        }
+      ],
+      "outputs": [
+        {
+          "name": "output",
+          "type": "*",
+          "links": null
+        }
+      ],
+      "title": "Show Full Prompt",
+      "properties": {
+        "cnr_id": "comfyui-easy-use",
+        "ver": "1.2.7",
+        "Node name for S&R": "easy showAnything"
+      },
+      "widgets_values": [
+        "very awa, best quality, masterpiece, highres, absurdres, very aesthetic, ultra-detailed, newest, hetero, high resolution, official style, detailed background, detailed face, detailed eyes, afterimage, motion lines, saber, blonde hair, black skirt, black shirt, 1girl, breasts, blush, open_mouth, 1boy, heart, hetero, penis, sex, vaginal, pov, groping, grabbing_another's_breast, heavy_breathing"
+      ]
+    }
+  ],
+  "links": [
+    [
+      1,
+      4,
+      0,
+      3,
+      0,
+      "MODEL"
+    ],
+    [
+      2,
+      5,
+      0,
+      3,
+      3,
+      "LATENT"
+    ],
+    [
+      7,
+      3,
+      0,
+      8,
+      0,
+      "LATENT"
+    ],
+    [
+      8,
+      4,
+      2,
+      8,
+      1,
+      "VAE"
+    ],
+    [
+      9,
+      8,
+      0,
+      9,
+      0,
+      "IMAGE"
+    ],
+    [
+      18,
+      20,
+      0,
+      11,
+      0,
+      "STRING"
+    ],
+    [
+      27,
+      4,
+      1,
+      27,
+      0,
+      "CLIP"
+    ],
+    [
+      30,
+      27,
+      0,
+      3,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      34,
+      28,
+      0,
+      29,
+      0,
+      "STRING"
+    ],
+    [
+      35,
+      19,
+      0,
+      29,
+      1,
+      "STRING"
+    ],
+    [
+      36,
+      11,
+      0,
+      29,
+      2,
+      "STRING"
+    ],
+    [
+      38,
+      29,
+      0,
+      27,
+      1,
+      "STRING"
+    ],
+    [
+      39,
+      11,
+      2,
+      32,
+      0,
+      "*"
+    ],
+    [
+      40,
+      29,
+      0,
+      33,
+      0,
+      "*"
+    ],
+    [
+      42,
+      20,
+      0,
+      34,
+      1,
+      "STRING"
+    ],
+    [
+      43,
+      4,
+      1,
+      34,
+      0,
+      "CLIP"
+    ],
+    [
+      44,
+      34,
+      0,
+      3,
+      2,
+      "CONDITIONING"
+    ],
+    [
+      45,
+      11,
+      0,
+      36,
+      0,
+      "*"
+    ]
+  ],
+  "groups": [],
+  "config": {
+    "links_ontop": false
+  },
+  "extra": {
+    "ds": {
+      "scale": 0.5534900853769001,
+      "offset": [
+        1390.2543136456125,
+        804.0540943719876
+      ]
+    },
+    "VHS_latentpreview": false,
+    "VHS_latentpreviewrate": 0,
+    "VHS_MetadataImage": true,
+    "VHS_KeepIntermediate": true
+  },
+  "version": 0.4
+}
