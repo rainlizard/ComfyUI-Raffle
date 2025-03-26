@@ -1528,7 +1528,7 @@
 [background_objects] basket
 [holding_small_items] holding_microphone
 [two_handed_character_items] arrow_(projectile)
-[actions] hand_on_headwear
+[specific_garment_interactions] hand_on_headwear
 [clothes_and_accessories] name_tag
 [female_physical_descriptors] petite
 [clothes_and_accessories] arm_warmers
@@ -3736,7 +3736,7 @@
 [clothes_and_accessories] blue_sash
 [thematic_settings] corruption
 [clothes_and_accessories] single_kneehigh
-[actions] bird_on_head
+[clothes_and_accessories] bird_on_head
 [standard_physical_descriptors] x-shaped_pupils
 [standard_physical_descriptors] yellow_skin
 [content_censorship_methods] covered_face
@@ -3824,7 +3824,7 @@
 [clothes_and_accessories] neon_trim
 [female_physical_descriptors] long_sidelocks
 [actions] twirling_hair
-[actions] food_on_head
+[clothes_and_accessories] food_on_head
 [one_handed_character_items] stuffed_cat
 [standard_physical_descriptors] scar_on_forehead
 [clothes_and_accessories] shark_hair_ornament
@@ -4937,7 +4937,7 @@
 [specific_garment_interactions] open_pants
 [background_objects] health_bar
 [standard_physical_descriptors] uneven_horns
-[actions] hands_on_headwear
+[specific_garment_interactions] hands_on_headwear
 [format_and_presentation] group_picture
 [one_handed_character_items] banknote
 [one_handed_character_items] poker_chip
@@ -5071,7 +5071,7 @@
 [standard_physical_descriptors] scar_on_stomach
 [clothes_and_accessories] cloth_gag
 [actions] fishing
-[holding_small_items] pokemon_on_head
+[clothes_and_accessories] pokemon_on_head
 [standard_physical_descriptors] viera
 [clothes_and_accessories] multiple_piercings
 [thematic_settings] setsubun
@@ -5701,7 +5701,7 @@
 [clothes_and_accessories] white_tube_top
 [expressions_and_mental_state] exhausted
 [background_objects] moon_(ornament)
-[poses] cat_on_head
+[clothes_and_accessories] cat_on_head
 [clothes_and_accessories] orange_belt
 [format_and_presentation] ornate_border
 [clothes_and_accessories] black_veil
@@ -7220,7 +7220,7 @@
 [physical_locations] porch
 [clothes_and_accessories] white_shrug
 [actions] hand_on_another's_ear
-[actions] hand_on_headphones
+[clothes_and_accessories] hand_on_headphones
 [metadata_and_attribution] how_to
 [poses] looking_through_own_legs
 [standard_physical_descriptors] chocobo
@@ -8015,7 +8015,7 @@
 [clothes_and_accessories] studded_collar
 [actions] watching
 [clothes_and_accessories] pink_trim
-[actions] horn_grab
+[standard_physical_descriptors] horn_grab
 [character_count] worldwide_miku
 [clothes_and_accessories] bear_hood
 [holding_small_items] holding_candy_apple
@@ -8655,7 +8655,7 @@
 [actions] remembering
 [clothes_and_accessories] ring_necklace
 [standard_physical_descriptors] halfling
-[poses] fruit_on_head
+[clothes_and_accessories] fruit_on_head
 [female_physical_descriptors] slim_legs
 [background_objects] kickboard
 [two_handed_character_items] musket
@@ -8810,7 +8810,7 @@
 [clothes_and_accessories] white_sleeve_cuffs
 [lighting_and_vfx] object_floating_above_hand
 [standard_physical_descriptors] golden_arms
-[poses] rabbit_on_head
+[clothes_and_accessories] rabbit_on_head
 [physical_locations] party
 [background_objects] banana_peel
 [actions] playing_with_another's_hair
@@ -9355,7 +9355,7 @@
 [clothes_and_accessories] taichou_haori
 [clothes_and_accessories] orange_tank_top
 [actions] sinking
-[actions] chibi_on_head
+[clothes_and_accessories] chibi_on_head
 [specific_garment_interactions] headphones_removed
 [clothes_and_accessories] boutonniere
 [clothes_and_accessories] red_wrist_cuffs
@@ -9706,9 +9706,9 @@
 [metadata_and_attribution] neco_spirit
 [background_objects] animal-themed_food
 [expressions_and_mental_state] concentrating
-[actions] hands_on_headphones
+[clothes_and_accessories] hands_on_headphones
 [thematic_settings] train_conductor
-[standard_physical_descriptors] snow_on_head
+[thematic_settings] snow_on_head
 [expressions_and_mental_state] lonely
 [actions] hugging_another's_leg
 [clothes_and_accessories] pankou
@@ -9830,7 +9830,7 @@
 [background_objects] mistletoe
 [one_handed_character_items] spork
 [clothes_and_accessories] zipper_dress
-[standard_physical_descriptors] paper_on_head
+[clothes_and_accessories] paper_on_head
 [specific_garment_interactions] torn_bikini
 [clothes_and_accessories] metal_gloves
 [background_objects] traffic
@@ -11378,7 +11378,7 @@
 [clothes_and_accessories] workout_clothes
 [background_objects] ostrich
 [background_objects] andon_(lighting)
-[standard_physical_descriptors] butterfly_on_head
+[clothes_and_accessories] butterfly_on_head
 [background_objects] cherry_tree
 [specific_garment_interactions] clothes_on_and_off
 [actions] hat_tug
@@ -11910,7 +11910,7 @@
 [clothes_and_accessories] fur-trimmed_mittens
 [metadata_and_attribution] release_date
 [clothes_and_accessories] plaid_sailor_collar
-[actions] book_on_head
+[clothes_and_accessories] book_on_head
 [actions] stomach_punch
 [poses] head_between_pecs
 [clothes_and_accessories] feather_necklace
@@ -12769,7 +12769,7 @@
 [two_handed_character_items] saw_cleaver
 [clothes_and_accessories] hanafuda_earrings
 [standard_physical_descriptors] two-tone_nails
-[background_objects] crab_on_head
+[clothes_and_accessories] crab_on_head
 [clothes_and_accessories] ichimegasa
 [clothes_and_accessories] brown_hood
 [background_objects] doritos
@@ -13745,7 +13745,7 @@
 [metadata_and_attribution] tacet_discord_(wuthering_waves)
 [bodily_fluids] lactating_into_container
 [background_objects] seabird
-[poses] pot_on_head
+[clothes_and_accessories] pot_on_head
 [metadata_and_attribution] cheshire_cat_(alice_in_wonderland)_(cosplay)
 [clothes_and_accessories] leather_suit
 [clothes_and_accessories] black_visor
@@ -16274,7 +16274,7 @@
 [standard_physical_descriptors] severed_leg
 [bodily_fluids] blood_on_armor
 [clothes_and_accessories] minnie_mouse_ears
-[poses] doll_on_head
+[clothes_and_accessories] doll_on_head
 [metadata_and_attribution] void_(guilty_crown)
 [holding_small_items] holding_computer_mouse
 [clothes_and_accessories] royal_guard_set_(zelda)
@@ -16650,7 +16650,7 @@
 [background_objects] missing_poster
 [clothes_and_accessories] latex_pants
 [actions] hand_on_sheath
-[poses] dog_on_head
+[clothes_and_accessories] dog_on_head
 [physical_locations] trench
 [one_handed_character_items] rolled_up_paper
 [actions] finishing_move
@@ -17415,7 +17415,7 @@
 [standard_physical_descriptors] spotted_tail
 [holding_small_items] holding_tool
 [male_physical_descriptors] purple_facial_hair
-[poses] bag_on_head
+[clothes_and_accessories] bag_on_head
 [clothes_and_accessories] belted_skirt
 [background_objects] purple_tulip
 [standard_physical_descriptors] veiny_neck
@@ -18078,7 +18078,7 @@
 [two_handed_character_items] flanged_mace
 [two_handed_character_items] .52_gal_(splatoon)
 [clothes_and_accessories] revice_driver
-[poses] cup_on_head
+[clothes_and_accessories] cup_on_head
 [metadata_and_attribution] b-komachi_(new)
 [physical_locations] east_germany
 [clothes_and_accessories] takamachi_nanoha_(cosplay)
@@ -18200,7 +18200,7 @@
 [speech_and_text] ukrainian_text
 [clothes_and_accessories] grey_scrunchie
 [thematic_settings] wet_dream
-[poses] box_on_head
+[clothes_and_accessories] box_on_head
 [female_physical_descriptors] loosely_tucked_bangs
 [one_handed_character_items] balisong
 [clothes_and_accessories] purple_shrug
@@ -18828,7 +18828,7 @@
 [abstract_symbols] the_high_priestess_(tarot)
 [metadata_and_attribution] tokimeki_poporon
 [background_objects] bird_skull
-[actions] hand_on_headset
+[clothes_and_accessories] hand_on_headset
 [actions] double_ok_sign
 [background_objects] inflatable_flamingo
 [two_handed_character_items] hakka_no_togame_(bankai)
