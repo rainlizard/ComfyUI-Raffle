@@ -1580,7 +1580,7 @@
 [clothes_and_accessories] geta
 [clothes_and_accessories] green_hat
 [standard_physical_descriptors] cow_ears
-[abstract_symbols] red_halo
+[clothes_and_accessories] red_halo
 [clothes_and_accessories] japanese_armor
 [one_handed_character_items] poke_ball_(basic)
 [clothes_and_accessories] sailor_hat
@@ -11230,7 +11230,7 @@
 [female_physical_descriptors] hair_between_horns
 [female_physical_descriptors] hyena_girl
 [clothes_and_accessories] eel_hat
-[actions] grabbing_another's_twintails
+[female_physical_descriptors] grabbing_another's_twintails
 [expressions_and_mental_state] waiting
 [background_objects] black_tea
 [thematic_settings] zanshomimai
