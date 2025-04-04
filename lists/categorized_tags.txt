@@ -1632,7 +1632,7 @@
 [standard_physical_descriptors] gyaru
 [physical_locations] cityscape
 [clothes_and_accessories] highleg_one-piece_swimsuit
-[abstract_symbols] yellow_halo
+[standard_physical_descriptors] yellow_halo
 [background_objects] anchor_symbol
 [two_handed_character_items] assault_rifle
 [holding_large_items] holding_instrument
@@ -2809,7 +2809,7 @@
 [standard_physical_descriptors] scar_on_chest
 [standard_physical_descriptors] number_tattoo
 [female_physical_descriptors] backboob
-[abstract_symbols] black_halo
+[standard_physical_descriptors] black_halo
 [specific_garment_interactions] shorts_pull
 [holding_large_items] holding_broom
 [background_objects] chess_piece
@@ -2845,7 +2845,7 @@
 [relationships] family
 [standard_physical_descriptors] mole_on_neck
 [background_objects] microphone_stand
-[abstract_symbols] green_halo
+[standard_physical_descriptors] green_halo
 [background_objects] kotatsu
 [thematic_settings] blood_on_weapon
 [thematic_settings] time_paradox
@@ -3389,7 +3389,7 @@
 [clothes_and_accessories] diagonal_stripes
 [specific_garment_interactions] leotard_aside
 [thematic_settings] sailor
-[actions] mask_pull
+[specific_garment_interactions] mask_pull
 [background_objects] pizza
 [relationships] father_and_son
 [two_handed_character_items] violin
@@ -12025,7 +12025,7 @@
 [two_handed_character_items] sig_p220/p226
 [clothes_and_accessories] gradient_necktie
 [standard_physical_descriptors] armless_amputee
-[lighting_and_vfx] glowing_halo
+[standard_physical_descriptors] glowing_halo
 [standard_physical_descriptors] grey_feathers
 [one_handed_character_items] pokedex
 [background_objects] armored_personnel_carrier
@@ -12674,7 +12674,7 @@
 [clothes_and_accessories] soviet_army
 [background_objects] sewing_machine
 [clothes_and_accessories] shield_print
-[lighting_and_vfx] flaming_halo
+[standard_physical_descriptors] flaming_halo
 [bodily_fluids] lipstick_mark_on_breast
 [standard_physical_descriptors] meerkat_ears
 [clothes_and_accessories] white_legwear
