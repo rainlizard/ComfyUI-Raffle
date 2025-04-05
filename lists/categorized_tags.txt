@@ -35,7 +35,7 @@
 [clothes_and_accessories] jewelry
 [character_count] 2girls
 [intentional_design_exposure] cleavage
-[nudity_and_absence_of_clothing] bare_shoulders
+[intentional_design_exposure] bare_shoulders
 [female_physical_descriptors] very_long_hair
 [clothes_and_accessories] jacket
 [poses] sitting
@@ -1171,7 +1171,7 @@
 [color_scheme] blue_theme
 [background_objects] teddy_bear
 [standard_physical_descriptors] oni
-[male_intimate_anatomy] large_penis
+[male_physical_descriptors] large_penis
 [two_handed_character_items] machinery
 [one_handed_character_items] open_book
 [standard_physical_descriptors] pink_halo
@@ -1222,7 +1222,7 @@
 [actions] hug_from_behind
 [physical_locations] stairs
 [clothes_and_accessories] sarashi
-[male_intimate_anatomy] veiny_penis
+[male_physical_descriptors] veiny_penis
 [camera_focus_subject] animal_focus
 [background_objects] crystal
 [thematic_settings] new_year
@@ -3893,7 +3893,7 @@
 [background_objects] riding_crop
 [format_and_presentation] magazine_cover
 [holding_small_items] holding_sheath
-[male_intimate_anatomy] small_penis
+[male_physical_descriptors] small_penis
 [actions] after_kiss
 [clothes_and_accessories] overskirt
 [background_objects] birthday_cake
@@ -4432,7 +4432,7 @@
 [clothes_and_accessories] pink_pantyhose
 [clothes_and_accessories] yellow_belt
 [abstract_symbols] smiley_face
-[male_intimate_anatomy] phimosis
+[male_physical_descriptors] phimosis
 [clothes_and_accessories] party_hat
 [background_objects] tokkuri
 [clothes_and_accessories] helm
@@ -5212,7 +5212,7 @@
 [background_objects] berry
 [background_objects] treasure_chest
 [lighting_and_vfx] visible_air
-[male_intimate_anatomy] large_testicles
+[male_physical_descriptors] large_testicles
 [special_backgrounds] pink_border
 [background_objects] used_tissue
 [expressions_and_mental_state] excited
@@ -5342,7 +5342,7 @@
 [clothes_and_accessories] red_apron
 [clothes_and_accessories] anzio_school_uniform
 [standard_physical_descriptors] mole_on_cheek
-[male_intimate_anatomy] penis_size_difference
+[male_physical_descriptors] penis_size_difference
 [clothes_and_accessories] brown_corset
 [background_objects] autobot
 [standard_physical_descriptors] goat_girl
@@ -5358,7 +5358,7 @@
 [clothes_and_accessories] gusset
 [clothes_and_accessories] multiple_bracelets
 [standard_physical_descriptors] fake_mustache
-[male_intimate_anatomy] girthy_penis
+[male_physical_descriptors] girthy_penis
 [poses] fallen_down
 [clothes_and_accessories] collared_vest
 [poses] jack-o'_challenge
@@ -5720,7 +5720,7 @@
 [standard_physical_descriptors] centaur
 [clothes_and_accessories] pink_one-piece_swimsuit
 [background_objects] lounge_chair
-[male_intimate_anatomy] dark_penis
+[male_physical_descriptors] dark_penis
 [standard_physical_descriptors] holding_own_tail
 [sex_acts] cooperative_paizuri
 [actions] curtsey
@@ -6232,7 +6232,7 @@
 [clothes_and_accessories] argyle_thighhighs
 [clothes_and_accessories] a_certain_high_school_uniform
 [two_handed_character_items] battle_rifle
-[male_intimate_anatomy] huge_testicles
+[male_physical_descriptors] huge_testicles
 [physical_locations] island
 [one_handed_character_items] chalk
 [male_intimate_anatomy] penis_peek
@@ -6253,7 +6253,7 @@
 [background_objects] bamboo_steamer
 [thematic_settings] native_american
 [background_objects] sorcerer's_sutra_scroll
-[male_intimate_anatomy] no_testicles
+[female_physical_descriptors] no_testicles
 [background_objects] tropical_drink
 [clothes_and_accessories] ammunition_belt
 [actions] pouring_onto_self
@@ -10485,7 +10485,7 @@
 [clothes_and_accessories] hestia_(danmachi)_(cosplay)
 [clothes_and_accessories] cycling_uniform
 [clothes_and_accessories] sleeveless_duster
-[male_intimate_anatomy] gigantic_penis
+[male_physical_descriptors] gigantic_penis
 [clothes_and_accessories] sailor_moon_(cosplay)
 [background_objects] kindergarten_bag
 [actions] yoga
@@ -10529,7 +10529,7 @@
 [clothes_and_accessories] anna_miller
 [background_objects] marionette
 [clothes_and_accessories] chun-li_(cosplay)
-[male_intimate_anatomy] spiked_penis
+[male_physical_descriptors] spiked_penis
 [metadata_and_attribution] deal_with_it_(meme)
 [sex_acts] autofacial
 [poses] slouching
@@ -11766,7 +11766,7 @@
 [artstyle_technique] anatomical_nonsense
 [clothes_and_accessories] team_star
 [two_handed_character_items] virtuous_contract
-[male_intimate_anatomy] large_bulge
+[male_physical_descriptors] large_bulge
 [poses] hands_on_thighs
 [thematic_settings] knifed
 [sex_acts] implied_handjob
@@ -13737,7 +13737,7 @@
 [metadata_and_attribution] french_girly
 [metadata_and_attribution] spicebush_(e.g.o)
 [clothes_and_accessories] butterfly_necklace
-[male_intimate_anatomy] sagging_testicles
+[male_physical_descriptors] sagging_testicles
 [clothes_and_accessories] polished_shoes
 [clothes_and_accessories] red_visor
 [clothes_and_accessories] floral_print_shirt
@@ -14678,7 +14678,7 @@
 [background_objects] katsu_(food)
 [actions] hands_on_own_leg
 [character_count] mixed_maids
-[male_intimate_anatomy] penis_under_mask
+[specific_garment_interactions] penis_under_mask
 [actions] tug
 [holding_large_items] holding_pitchfork
 [clothes_and_accessories] telnyashka
@@ -16204,7 +16204,7 @@
 [one_handed_character_items] futou
 [poses] face_in_crotch
 [physical_locations] ballroom
-[male_intimate_anatomy] veiny_testicles
+[male_physical_descriptors] veiny_testicles
 [two_handed_character_items] great_knife
 [thematic_settings] gardevoir_day
 [clothes_and_accessories] bougu
@@ -17083,7 +17083,7 @@
 [background_objects] checkered_blanket
 [background_objects] gladiolus
 [metadata_and_attribution] solemn_lament_(e.g.o)
-[male_intimate_anatomy] small_testicles
+[male_physical_descriptors] small_testicles
 [clothes_and_accessories] no-show_socks
 [background_objects] severed_finger
 [metadata_and_attribution] keikenchi_(style)
@@ -18993,7 +18993,7 @@
 [standard_physical_descriptors] wings_through_clothes
 [specific_garment_interactions] leotard_tug
 [clothes_and_accessories] shirttail
-[male_intimate_anatomy] glowing_penis
+[male_physical_descriptors] glowing_penis
 [poses] sitting_on_drum
 [clothes_and_accessories] multicolored_sash
 [metadata_and_attribution] pixiv_bottle_(meme)
@@ -19434,7 +19434,7 @@
 [clothes_and_accessories] border_operator_uniform_(world_trigger)
 [background_objects] yule_log_(cake)
 [two_handed_character_items] rickenbacker
-[male_intimate_anatomy] blue_penis
+[male_physical_descriptors] blue_penis
 [background_objects] java_sparrow
 [clothes_and_accessories] frog_raincoat
 [actions] offering_leash
