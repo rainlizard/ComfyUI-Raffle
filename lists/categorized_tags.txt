@@ -2384,7 +2384,7 @@
 [physical_locations] mountainous_horizon
 [clothes_and_accessories] white_neckerchief
 [male_physical_descriptors] manly
-[actions] tail_wagging
+[female_physical_descriptors] tail_wagging
 [clothes_and_accessories] sweater_dress
 [actions] sheet_grab
 [standard_physical_descriptors] very_dark_skin
@@ -3611,7 +3611,7 @@
 [clothes_and_accessories] black_cardigan
 [clothes_and_accessories] wa_maid
 [actions] hand_on_another's_waist
-[general_clothing_exposure] bikini_tan
+[female_physical_descriptors] bikini_tan
 [background_objects] calligraphy_brush
 [actions] smelling
 [clothes_and_accessories] raincoat
