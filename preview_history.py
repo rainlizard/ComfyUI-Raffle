@@ -70,92 +70,77 @@ class PreviewHistory:
         history_folder = DEFAULT_HISTORY_FOLDER
 
         # Ensure target directory exists
-        if not os.path.exists(history_folder): # Use the constant directly
+        if not os.path.exists(history_folder):
             try:
-                os.makedirs(history_folder, exist_ok=True) # Use the constant directly
-                print(f"[PreviewHistory] Created history directory: {history_folder}") # Use the constant directly
+                os.makedirs(history_folder, exist_ok=True)
+                print(f"[PreviewHistory] Created history directory: {history_folder}")
             except OSError as e:
-                 print(f"[PreviewHistory] Error creating directory {history_folder}: {e}. Cannot proceed.") # Use the constant directly
+                 print(f"[PreviewHistory] Error creating directory {history_folder}: {e}. Cannot proceed.")
                  return {"ui": {"images": []}}
 
-        # --- Update History Files (if new image provided) ---
+        # --- Save New Image (if provided) ---
         if image is not None and image.nelement() > 0:
             new_pil_image = tensor2pil(image)
-
-            with PreviewHistory._dir_lock:
+            with PreviewHistory._dir_lock: # Lock specifically for saving
                 try:
-                    # Save the new image using numerical month timestamp
-                    # Format: history_DD-MM-YYYY_HH-MM-SS.png
                     now = datetime.now()
-                    # Format parts: %d=DD, %m=MM(numeric), %Y=YYYY, %H=HH(24h), %M=MM, %S=SS
-                    timestamp_final = now.strftime("%d-%m-%Y_%H-%M-%S") # Use %m for month number
-
+                    timestamp_final = now.strftime("%d-%m-%Y_%H-%M-%S")
                     new_filename = f"history_{timestamp_final}.png"
-                    new_path = os.path.join(history_folder, new_filename) # Use the constant indirectly via the variable
-                    # print(f"[PreviewHistory] Saving new file: {new_path}") # Debug
+                    new_path = os.path.join(history_folder, new_filename)
                     new_pil_image.save(new_path, "PNG", compress_level=1)
-
-                    # Cleanup: Remove oldest files beyond history_size
-                    # 1. Get all .png files with modification times
-                    all_files = []
-                    for filename in os.listdir(history_folder): # Use the constant indirectly
-                        if filename.lower().endswith(".png"):
-                            full_path = os.path.join(history_folder, filename) # Use the constant indirectly
-                            try:
-                                if os.path.isfile(full_path): # Ensure it's a file
-                                     mod_time = os.path.getmtime(full_path)
-                                     all_files.append((mod_time, full_path))
-                            except OSError:
-                                print(f"[PreviewHistory] Warning: Could not access file {full_path} during cleanup scan.")
-                                continue # Skip file if cannot get mod_time
-
-                    # 2. Sort by modification time, newest first
-                    all_files.sort(key=lambda x: x[0], reverse=True)
-
-                    # 3. Remove files exceeding the history size
-                    if len(all_files) > history_size:
-                        files_to_remove = all_files[history_size:] # Get the oldest ones
-                        # print(f"[PreviewHistory] Found {len(all_files)} files, keeping {history_size}, removing {len(files_to_remove)}.") # Debug
-                        for mod_time, path_to_remove in files_to_remove:
-                            try:
-                                # print(f"[PreviewHistory] Removing old file: {path_to_remove}") # Debug
-                                os.remove(path_to_remove)
-                            except OSError as e:
-                                print(f"[PreviewHistory] Error removing old file {path_to_remove}: {e}")
-
+                    # print(f"[PreviewHistory] Saved new file: {new_path}") # Debug
                 except Exception as e:
-                    print(f"[PreviewHistory] Error updating history files in '{history_folder}': {e}") # Use the constant indirectly
-                    # Attempt to continue to preview whatever state we're in
+                    print(f"[PreviewHistory] Error saving new image to '{history_folder}': {e}")
+                    # Continue even if saving fails, try to show existing history
 
-        # --- Load Images for Preview ---
+
+        # --- Cleanup Old Files & Load Images for Preview ---
         preview_images_pil = []
         sorted_history_files = []
-        with PreviewHistory._dir_lock: # Use lock for consistency during listing
+        with PreviewHistory._dir_lock: # Lock for listing, cleanup, and getting paths
              try:
-                # Get all .png files with modification times again for loading
-                temp_files = []
-                for filename in os.listdir(history_folder): # Use the constant indirectly
+                # Get all .png files with modification times for cleanup and loading
+                all_files = []
+                for filename in os.listdir(history_folder):
                      if filename.lower().endswith(".png"):
-                        full_path = os.path.join(history_folder, filename) # Use the constant indirectly
+                        full_path = os.path.join(history_folder, filename)
                         try:
                              if os.path.isfile(full_path):
                                 mod_time = os.path.getmtime(full_path)
-                                temp_files.append((mod_time, full_path))
+                                all_files.append((mod_time, full_path))
                         except OSError:
-                             # Error getting mod time during load, might be transient, skip file
-                             print(f"[PreviewHistory] Warning: Could not access file {full_path} during load scan.")
-                             continue
+                             print(f"[PreviewHistory] Warning: Could not access file {full_path} during scan.")
+                             continue # Skip file if cannot get mod_time
+
                 # Sort by modification time, newest first
-                temp_files.sort(key=lambda x: x[0], reverse=True)
-                # Keep only the paths, up to history_size
-                sorted_history_files = [f[1] for f in temp_files[:history_size]]
+                all_files.sort(key=lambda x: x[0], reverse=True)
+
+                # Cleanup: Remove files exceeding the current history_size
+                if len(all_files) > history_size:
+                    files_to_remove = all_files[history_size:] # Get the oldest ones
+                    # print(f"[PreviewHistory] Found {len(all_files)} files, keeping {history_size}, removing {len(files_to_remove)}.") # Debug
+                    for mod_time, path_to_remove in files_to_remove:
+                        try:
+                            # print(f"[PreviewHistory] Removing old file: {path_to_remove}") # Debug
+                            os.remove(path_to_remove)
+                        except OSError as e:
+                            print(f"[PreviewHistory] Error removing old file {path_to_remove}: {e}")
+                    # Keep only the files that were not removed
+                    files_to_keep = all_files[:history_size]
+                else:
+                    files_to_keep = all_files # Keep all if within limit
+
+                # Get the paths for the files we are keeping for the preview
+                sorted_history_files = [f[1] for f in files_to_keep]
+
              except Exception as e:
-                  print(f"[PreviewHistory] Error listing files in {history_folder} for preview: {e}") # Use the constant indirectly
-                  # Fall through with empty list
+                  print(f"[PreviewHistory] Error listing/cleaning files in {history_folder} for preview: {e}")
+                  # Fall through with empty list if error during file operations
+
 
         # Determine a consistent size for placeholders if needed
         placeholder_size = (128, 128) # Default
-        if sorted_history_files: # Check if we found any files
+        if sorted_history_files: # Check if we have any files paths left after potential cleanup
             try:
                 # Try loading the first actual image (newest one)
                 first_image_path = sorted_history_files[0]
@@ -163,9 +148,9 @@ class PreviewHistory:
                 placeholder_size = temp_img.size
                 temp_img.close()
             except Exception:
-                 pass # Ignore if it fails, keep default
+                 pass # Ignore if it fails, keep default size
 
-        # Load images from the sorted list
+        # Load images from the potentially cleaned-up list
         for i, fp in enumerate(sorted_history_files): # Iterate through the paths we collected
             try:
                 img = Image.open(fp).convert('RGB')
