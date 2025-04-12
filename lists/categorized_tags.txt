@@ -7067,7 +7067,7 @@
 [standard_physical_descriptors] gerudo
 [clothes_and_accessories] green_headscarf
 [clothes_and_accessories] toga
-[actions] asymmetrical_dual_wielding
+[holding_large_items] asymmetrical_dual_wielding
 [poses] hand_to_head
 [background_objects] sticky_note
 [background_objects] white_tiger
@@ -13014,7 +13014,7 @@
 [one_handed_character_items] dollar_bill
 [female_physical_descriptors] floating_breasts
 [background_objects] shichirin
-[actions] triple_wielding
+[holding_large_items] triple_wielding
 [background_objects] stake
 [clothes_and_accessories] culottes
 [sex_acts] tail_insertion
