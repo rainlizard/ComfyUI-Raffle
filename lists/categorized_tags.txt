@@ -337,7 +337,7 @@
 [male_physical_descriptors] facial_hair
 [special_backgrounds] blue_background
 [clothes_and_accessories] black_hat
-[lighting_and_vfx] shiny_skin
+[standard_physical_descriptors] shiny_skin
 [female_physical_descriptors] hair_intakes
 [clothes_and_accessories] bodysuit
 [expressions_and_mental_state] expressionless
@@ -1242,7 +1242,7 @@
 [expressions_and_mental_state] !?
 [camera_focus_subject] foot_out_of_frame
 [clothes_and_accessories] bandaid_on_face
-[lighting_and_vfx] shiny_clothes
+[clothes_and_accessories] shiny_clothes
 [female_physical_descriptors] blunt_ends
 [lighting_and_vfx] light_rays
 [sex_acts] object_insertion
@@ -2384,7 +2384,7 @@
 [physical_locations] mountainous_horizon
 [clothes_and_accessories] white_neckerchief
 [male_physical_descriptors] manly
-[female_physical_descriptors] tail_wagging
+[standard_physical_descriptors] tail_wagging
 [clothes_and_accessories] sweater_dress
 [actions] sheet_grab
 [standard_physical_descriptors] very_dark_skin
@@ -4971,7 +4971,7 @@
 [metadata_and_attribution] if_they_mated
 [character_count] 6+others
 [poses] curled_fingers
-[poses] tail_wrap
+[standard_physical_descriptors] tail_wrap
 [clothes_and_accessories] plaid_jacket
 [expressions_and_mental_state] x
 [sex_acts] handsfree_ejaculation
@@ -5857,7 +5857,7 @@
 [holding_small_items] holding_megaphone
 [one_handed_character_items] crime_prevention_buzzer
 [background_objects] campfire
-[actions] tail_grab
+[standard_physical_descriptors] tail_grab
 [abstract_symbols] ankh
 [clothes_and_accessories] wrist_bow
 [clothes_and_accessories] frilled_wrist_cuffs
@@ -6007,7 +6007,7 @@
 [bodily_fluids] chocolate_on_breasts
 [clothes_and_accessories] power_suit
 [background_objects] animal_on_lap
-[poses] tail_between_legs
+[standard_physical_descriptors] tail_between_legs
 [holding_small_items] holding_pizza
 [special_backgrounds] yellow_border
 [clothes_and_accessories] grey_capelet
@@ -6123,7 +6123,7 @@
 [clothes_and_accessories] food-themed_clothes
 [clothes_and_accessories] eyewear_hang
 [lighting_and_vfx] glowing_butterfly
-[expressions_and_mental_state] runny_makeup
+[female_physical_descriptors] runny_makeup
 [clothes_and_accessories] print_headwear
 [poses] under_kotatsu
 [standard_physical_descriptors] monkey_ears
@@ -6320,7 +6320,7 @@
 [clothes_and_accessories] lace-trimmed_choker
 [clothes_and_accessories] condom_belt
 [background_objects] haniwa_(statue)
-[poses] tail_around_own_leg
+[standard_physical_descriptors] tail_around_own_leg
 [clothes_and_accessories] gold_ring
 [clothes_and_accessories] lace-trimmed_gloves
 [one_handed_character_items] energy_drink
@@ -12889,7 +12889,7 @@
 [clothes_and_accessories] sun_earrings
 [thematic_settings] punishment
 [standard_physical_descriptors] legendary_super_saiyan
-[actions] tail_pull
+[standard_physical_descriptors] tail_pull
 [actions] nodding
 [metadata_and_attribution] retrofit_(azur_lane)
 [two_handed_character_items] splattershot_jr._(splatoon)
@@ -14776,7 +14776,7 @@
 [background_objects] roulette
 [clothes_and_accessories] horns_through_hood
 [actions] pouncing
-[sex_acts] tail_masturbation
+[standard_physical_descriptors] tail_masturbation
 [clothes_and_accessories] cross-species_cosplay
 [background_objects] chopped_spring_onion
 [two_handed_character_items] iwi_tavor
@@ -16374,7 +16374,7 @@
 [clothes_and_accessories] circuit_board_print
 [holding_small_items] holding_shoe
 [clothes_and_accessories] yellow_mittens
-[actions] tail_around_another's_leg
+[standard_physical_descriptors] tail_around_another's_leg
 [metadata_and_attribution] servant_card_(fate/grand_order)
 [clothes_and_accessories] black_rope
 [camera_focus_subject] arm_out_of_frame
@@ -18095,7 +18095,7 @@
 [metadata_and_attribution] webclap
 [metadata_and_attribution] seyana_(meme)
 [standard_physical_descriptors] ratite
-[actions] tail_fondling
+[standard_physical_descriptors] tail_fondling
 [artstyle_technique] ilya_kuvshinov_(style)
 [one_handed_character_items] haraegushi
 [sex_acts] rope_gag
@@ -18560,7 +18560,7 @@
 [clothes_and_accessories] new_balance
 [metadata_and_attribution] mitsuketa_keshiki_tazusaete
 [poses] strappado
-[poses] tail_around_arm
+[standard_physical_descriptors] tail_around_arm
 [poses] ga_rune_pose
 [character_count] kalina_(girls'_frontline)_(cosplay)
 [bodily_fluids] cum_on_bed
