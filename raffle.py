@@ -70,10 +70,10 @@ class Raffle:
 
     CATEGORY = "Raffle"
     RETURN_TYPES = ("STRING", "STRING", "STRING")
-    RETURN_NAMES = ("Filtered tags", "Unfiltered tags", "Debug info")
+    RETURN_NAMES = ("Raffled output", "Unfiltered", "Debug info")
     OUTPUT_TOOLTIPS = (
-        "The final filtered list of tags that match your selected categories with negative prompt tags removed, ready to use in your prompt",
-        "The complete original taglist that was randomly selected from the pool before any filtering was applied (for debugging purposes)",
+        "The final list of tags selected by the raffle and filtered according to your settings, ready for use",
+        "The complete original taglist that was randomly selected before any filtering was applied",
         "Information about the selection process, including the size of the available pool of taglists after applying your filters"
     )
     OUTPUT_NODE = True
