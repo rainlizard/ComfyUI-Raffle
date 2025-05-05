@@ -2655,7 +2655,7 @@
 [color_scheme] sepia
 [expressions_and_mental_state] flower-shaped_pupils
 [actions] playing_games
-[general_clothing_exposure] leotard_under_clothes
+[clothes_and_accessories] leotard_under_clothes
 [clothes_and_accessories] uwabaki
 [physical_locations] chain-link_fence
 [standard_physical_descriptors] single_mechanical_arm
@@ -7476,7 +7476,7 @@
 [metadata_and_attribution] credits
 [physical_locations] cracked_floor
 [clothes_and_accessories] hat_belt
-[general_clothing_exposure] popped_button
+[named_garment_exposure] popped_button
 [two_handed_character_items] beretta_92
 [standard_physical_descriptors] mole_on_arm
 [clothes_and_accessories] purple_veil
@@ -7559,7 +7559,7 @@
 [two_handed_character_items] splattershot_(splatoon)
 [poses] arm_on_another's_shoulder
 [character_count] blake_bloom_(wuthering_waves)
-[general_clothing_exposure] leotard_peek
+[named_garment_exposure] leotard_peek
 [standard_physical_descriptors] brown_lips
 [general_clothing_exposure] clothes_tug
 [physical_locations] milky_way
@@ -14407,7 +14407,7 @@
 [background_objects] candy_bar
 [clothes_and_accessories] horizontal-striped_clothes
 [clothes_and_accessories] united_states_medal_of_honor
-[general_clothing_exposure] wet_shorts
+[named_garment_exposure] wet_shorts
 [expressions_and_mental_state] heart-shaped_mouth
 [artstyle_technique] fake_transparency
 [speech_and_text] spoken_mars_symbol
@@ -14624,8 +14624,8 @@
 [thematic_settings] medical_examination
 [poses] sitting_on_torii
 [clothes_and_accessories] multicolored_cloak
-[general_clothing_exposure] neckerchief_between_breasts
-[general_clothing_exposure] wet_thighhighs
+[specific_garment_interactions] neckerchief_between_breasts
+[clothes_and_accessories] wet_thighhighs
 [background_objects] inflatable_shark
 [expressions_and_mental_state] 3;
 [artstyle_technique] impasto
@@ -15433,7 +15433,7 @@
 [speech_and_text] requesting_internal_cumshot
 [background_objects] scallop
 [expressions_and_mental_state] cocked_eyebrow
-[general_clothing_exposure] revealing_tanlines
+[standard_physical_descriptors] revealing_tanlines
 [clothes_and_accessories] fox_costume
 [holding_small_items] holding_sewing_needle
 [metadata_and_attribution] scientific_name
@@ -17238,7 +17238,7 @@
 [background_objects] ambulance
 [clothes_and_accessories] raver
 [clothes_and_accessories] argentinian_flag
-[general_clothing_exposure] see-through_shorts
+[named_garment_exposure] see-through_shorts
 [thematic_settings] reincarnation
 [abstract_symbols] geometry
 [background_objects] boston_terrier
@@ -17488,7 +17488,7 @@
 [background_objects] blue_apple
 [clothes_and_accessories] string_tie
 [thematic_settings] gun_in_mouth
-[general_clothing_exposure] exposed_gusset
+[named_garment_exposure] exposed_gusset
 [clothes_and_accessories] gold_panties
 [actions] walking_bike
 [holding_small_items] holding_bandaid
