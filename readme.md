@@ -7,7 +7,7 @@ A semi-random prompt generator for danbooru tags that works alongside your chara
 1. From within ComfyUI Manager, search for Raffle and install it
 2. Add the Raffle node to your workflow
 3. Connect your Negative Prompt to the "negative_prompt" input (you may need to convert it to a `text` node first)
-4. Use the "Filtered tags" output in your Positive Prompt (merge it with a `text concat` or `string concat` node)
+4. Use the `Raffled output` in your Positive Prompt (merge it with a `text concat` or `string concat` node)
 
 Download the workflow example for detailed implementation: [Raffle Example.json](https://github.com/rainlizard/ComfyUI-Raffle/blob/main/Raffle%20Example.json)
 
@@ -26,7 +26,7 @@ For offline use 400,000 taglists have been scraped from danbooru. Raffle randoml
    - `negative_prompt`
    - `filter_out_tags`
    - if the tag isn't even in `categorized_tags.txt` then it's also filtered
-4. The final result is the `Filtered tags` output. You can use this in your Positive Prompt.
+4. The final result is the `Raffled output`. You can use this in your Positive Prompt.
 
 ## Node Options
 - **use_general**: Enable selection from general.txt which contains 100,000 general taglists
@@ -41,7 +41,7 @@ For offline use 400,000 taglists have been scraped from danbooru. Raffle randoml
 - **exclude_tag_categories**: Exclude entire categories of tags (e.g., "clothes_and_accessories", "standard_physical_descriptors") from the final output
 
 ## Node Outputs
-- **Filtered tags**: The final list of tags ready to use in your prompt
+- **Raffled output**: The final list of tags ready to use in your prompt
 - **Unfiltered tags**: The complete original taglist before filtering (for debugging)
 - **Debug info**: Information about the selection process, including available taglist count
 
