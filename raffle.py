@@ -25,6 +25,55 @@ DEFAULT_TAGLISTS_MUST_INCLUDE = "1girl"
 # Critical categories that should be excluded to maintain workflow
 WARNING_ABOUT_NEW_CATEGORIES = {'artist', 'character_name', 'copyright', 'meta'}
 
+# Global list of all available categories - used by both Raffle and TagCategoryStrength
+ALL_CATEGORIES = [
+    'abstract_symbols',
+    'actions',
+    'artstyle_technique',
+    'artist',
+    'background_objects',
+    'bodily_fluids',
+    'camera_angle_perspective',
+    'camera_focus_subject',
+    'camera_framing_composition',
+    'character_count',
+    'character_name',
+    'clothes_and_accessories',
+    'color_scheme',
+    'content_censorship_methods',
+    'copyright',
+    'expressions_and_mental_state',
+    'female_intimate_anatomy',
+    'female_physical_descriptors',
+    'format_and_presentation',
+    'gaze_direction_and_eye_contact',
+    'general_clothing_exposure',
+    'generic_clothing_interactions',
+    'holding_large_items',
+    'holding_small_items',
+    'intentional_design_exposure',
+    'lighting_and_vfx',
+    'male_intimate_anatomy',
+    'male_physical_descriptors',
+    'meta',
+    'metadata_and_attribution',
+    'named_garment_exposure',
+    'nudity_and_absence_of_clothing',
+    'one_handed_character_items',
+    'physical_locations',
+    'poses',
+    'publicly_visible_anatomy',
+    'relationships',
+    'sex_acts',
+    'sfw_clothed_anatomy',
+    'special_backgrounds',
+    'specific_garment_interactions',
+    'speech_and_text',
+    'standard_physical_descriptors',
+    'thematic_settings',
+    'two_handed_character_items'
+]
+
 class Raffle:
     # Class variable to track if the critical categories warning has been shown
     _critical_warning_shown = False
@@ -187,54 +236,8 @@ class Raffle:
         if not os.path.exists(categorized_tags_file_path):
             raise ValueError(f"Categorized tags file not found at {categorized_tags_file_path}")
 
-        # Define all available categories and handle exclusions
-        all_categories = [
-            'abstract_symbols',
-            'actions',
-            'artstyle_technique',
-            'artist',
-            'background_objects',
-            'bodily_fluids',
-            'camera_angle_perspective',
-            'camera_focus_subject',
-            'camera_framing_composition',
-            'character_count',
-            'character_name',
-            'clothes_and_accessories',
-            'color_scheme',
-            'content_censorship_methods',
-            'copyright',
-            'expressions_and_mental_state',
-            'female_intimate_anatomy',
-            'female_physical_descriptors',
-            'format_and_presentation',
-            'gaze_direction_and_eye_contact',
-            'general_clothing_exposure',
-            'generic_clothing_interactions',
-            'holding_large_items',
-            'holding_small_items',
-            'intentional_design_exposure',
-            'lighting_and_vfx',
-            'male_intimate_anatomy',
-            'male_physical_descriptors',
-            'meta',
-            'metadata_and_attribution',
-            'named_garment_exposure',
-            'nudity_and_absence_of_clothing',
-            'one_handed_character_items',
-            'physical_locations',
-            'poses',
-            'publicly_visible_anatomy',
-            'relationships',
-            'sex_acts',
-            'sfw_clothed_anatomy',
-            'special_backgrounds',
-            'specific_garment_interactions',
-            'speech_and_text',
-            'standard_physical_descriptors',
-            'thematic_settings',
-            'two_handed_character_items'
-        ]
+        # Use the global categories list
+        all_categories = ALL_CATEGORIES
         
         # Process excluded categories
         excluded_categories = []
