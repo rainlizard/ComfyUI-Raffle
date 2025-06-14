@@ -18,11 +18,17 @@ condom, used_condom, condom_wrapper, condom_in_mouth, holding_condom, condom_on_
 
 DEFAULT_EXCLUDE_TAGLISTS = "comic, 4koma, multiple_girls, multiple_boys, multiple_views, reference_sheet, 2girls, 3girls, 4girls, 5girls, 6+girls, 2boys, 3boys, 4boys, 5boys, 6+boys, gangbang, threesome, mmf_threesome, ffm_threesome, group_sex, cooperative_fellatio, cooperative_paizuri, double_handjob, surrounded_by_penises, furry, obese, yaoi, yuri, otoko_no_ko, strap-on, futa_with_female, futa_without_pussy, implied_futanari, futanari, diaper, fart, pee, peeing, pee_puddle, pee_stain, peeing_self, golden_shower, scat, guro, ero_guro, intestines, vore, horse_penis"
 
-DEFAULT_EXCLUDE_CATEGORIES = "clothes_and_accessories, female_physical_descriptors, named_garment_exposure, specific_garment_interactions, speech_and_text, standard_physical_descriptors, metadata_and_attribution, intentional_design_exposure, two_handed_character_items, holding_large_items, content_censorship_methods"
+DEFAULT_EXCLUDE_CATEGORIES = "artist, character_name, copyright, meta, clothes_and_accessories, female_physical_descriptors, named_garment_exposure, specific_garment_interactions, speech_and_text, standard_physical_descriptors, metadata_and_attribution, intentional_design_exposure, two_handed_character_items, holding_large_items, content_censorship_methods"
 
 DEFAULT_TAGLISTS_MUST_INCLUDE = "1girl"
 
+# Critical categories that should be excluded to maintain workflow
+WARNING_ABOUT_NEW_CATEGORIES = {'artist', 'character_name', 'copyright', 'meta'}
+
 class Raffle:
+    # Class variable to track if the critical categories warning has been shown
+    _critical_warning_shown = False
+    
     @classmethod
     def INPUT_TYPES(s):
         extension_path = os.path.normpath(os.path.dirname(__file__))
@@ -44,12 +50,6 @@ class Raffle:
                     "default": DEFAULT_TAGLISTS_MUST_INCLUDE,
                     "tooltip": "<taglists_must_include> Only selects taglists that contain ALL of these tags. WARNING: Each tag added here severely reduces the available pool of taglists. Check the 'Debug info' output to see how many taglists remain available."
                 }),
-                "negative_prompt": ("STRING", {
-                    "multiline": True,
-                    "forceInput": True,
-                    "default": "",
-                    "tooltip": "<negative_prompt> Removes specific tags from the final output without affecting taglist selection. Tags listed here will be filtered out after a taglist is chosen, making this safer to use than 'exclude_taglists_containing'."
-                }),
                 "filter_out_tags": ("STRING", {
                     "multiline": True,
                     "default": DEFAULT_FILTER_OUT_TAGS,
@@ -66,7 +66,15 @@ class Raffle:
                     "tooltip": "<exclude_tag_categories> Exclude entire categories of tags from the final output. Each category contains related tags (e.g., 'poses' contains all pose-related tags). View the complete category list and their tags in the 'Debug info' output. Separate multiple categories with commas."
                 })
             },
-        } 
+            "optional": {
+                "negative_prompt": ("STRING", {
+                    "multiline": True,
+                    "forceInput": True,
+                    "default": "",
+                    "tooltip": "<negative_prompt> Removes specific tags from the final output without affecting taglist selection. Tags listed here will be filtered out after a taglist is chosen, making this safer to use than 'exclude_taglists_containing'."
+                })
+            }
+        }
 
     CATEGORY = "Raffle"
     RETURN_TYPES = ("STRING", "STRING", "STRING")
@@ -162,9 +170,9 @@ class Raffle:
         ]
 
     def process_tags(self, exclude_taglists_containing, taglists_must_include, seed,
-                    negative_prompt="", filter_out_tags="",
-                    use_general=True, use_questionable=False, use_sensitive=False, use_explicit=False,
-                    exclude_tag_categories=""):
+                    filter_out_tags="", use_general=True, use_questionable=False, 
+                    use_sensitive=False, use_explicit=False, exclude_tag_categories="",
+                    negative_prompt=""):
         
         # Add directory existence check
         extension_path = os.path.normpath(os.path.dirname(__file__))
@@ -184,15 +192,18 @@ class Raffle:
             'abstract_symbols',
             'actions',
             'artstyle_technique',
+            'artist',
             'background_objects',
             'bodily_fluids',
             'camera_angle_perspective',
             'camera_focus_subject',
             'camera_framing_composition',
             'character_count',
+            'character_name',
             'clothes_and_accessories',
             'color_scheme',
             'content_censorship_methods',
+            'copyright',
             'expressions_and_mental_state',
             'female_intimate_anatomy',
             'female_physical_descriptors',
@@ -206,6 +217,7 @@ class Raffle:
             'lighting_and_vfx',
             'male_intimate_anatomy',
             'male_physical_descriptors',
+            'meta',
             'metadata_and_attribution',
             'named_garment_exposure',
             'nudity_and_absence_of_clothing',
@@ -236,6 +248,21 @@ class Raffle:
                             f"Please check the Debug info output for a complete list of valid categories. "
                             f"Category names may have changed in a new version.")
                 raise ValueError(error_msg)
+        
+        # Check if critical categories are excluded
+        excluded_categories_set = set(excluded_categories)
+        # Only show warning if NONE of the critical categories are excluded
+        critical_categories_excluded = WARNING_ABOUT_NEW_CATEGORIES & excluded_categories_set
+        if not critical_categories_excluded and not Raffle._critical_warning_shown:
+            # Mark that we've shown the warning
+            Raffle._critical_warning_shown = True
+            warning_msg = (
+                "There's been an update that will potentially break your Raffle generations.\n\n"
+                "To maintain your existing workflow, you will need to manually add some categories "
+                "to the <exclude_tag_categories> section of the raffle node (bottom section).\n\n"
+                f"Add the following categories to be excluded: artist, character_name, copyright, meta"
+            )
+            raise ValueError(warning_msg)
         
         # Set up categories dictionary - enable all categories except excluded ones
         categories = {category: (category not in excluded_categories) for category in all_categories}
