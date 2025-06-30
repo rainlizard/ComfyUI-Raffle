@@ -90,3 +90,10 @@ I've used AI to help categorize 20,000 tags in `categorized_tags.txt`, this incl
 - `standard_physical_descriptors`
 - `thematic_settings`
 - `two_handed_character_items`
+
+### Special Categories
+
+- `artist`
+- `character_name`
+- `copyright`
+- `meta`
