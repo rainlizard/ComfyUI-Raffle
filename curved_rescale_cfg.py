@@ -4,9 +4,9 @@ class CurvedRescaleCFG:
     @classmethod
     def INPUT_TYPES(s):
         return {"required": { "model": ("MODEL",),
-                              "multiplier": ("FLOAT", {"default": 0.7, "min": 0.0, "max": 1000000.0, "step": 0.01}),
+                              "multiplier": ("FLOAT", {"default": 1.0, "min": 0.0, "max": 1000000.0, "step": 0.01}),
                               "curve_peak_position": ("FLOAT", {"default": 0.5, "min": 0.0, "max": 1.0, "step": 0.01}),
-                              "curve_sharpness": ("FLOAT", {"default": 2.0, "min": 0.01, "max": 1000000.0, "step": 0.01}),
+                              "curve_sharpness": ("FLOAT", {"default": 2.1, "min": 0.01, "max": 1000000.0, "step": 0.01}),
                               }}
     RETURN_TYPES = ("MODEL",)
     FUNCTION = "patch"
