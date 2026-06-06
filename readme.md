@@ -1,6 +1,8 @@
 # Raffle
 
-A semi-random prompt generator for danbooru tags that works alongside your character prompt, allowing you to put your waifu in many scenarios. Made for Illustrious/NoobAI/Pony, or any models supporting tag prompting.
+A semi-random prompt generator for danbooru tags that works alongside your character prompt, allowing you to put your waifu in many scenarios. Made for Illustrious/NoobAI/Pony.
+
+NOTE: if using the model "Anima", it doesn't appreciate underscores, so you'll need to add a separate node that replaces underscores with spaces.
 
 ## Quick Start
 
