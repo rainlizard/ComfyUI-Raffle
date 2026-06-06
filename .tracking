@@ -1,0 +1,38 @@
+.gitattributes
+.github/workflows/publish.yml
+.gitignore
+Raffle Example.json
+__init__.py
+curved_rescale_cfg.py
+dev/categorizer/Cursor Composer Prompt.txt
+dev/categorizer/extract_categories.bat
+dev/categorizer/extract_categories.py
+dev/categorizer/manual_categorization (outdated).txt
+dev/categorizer/split_n_combine/split_and_combine_script.py
+dev/check-missing-tags.py
+dev/copy-categories-over.py
+dev/find_tags.py
+dev/remove-numbers-at-end-of-each-line.py
+dev/swap-in-new-categories.py
+dev/tag-scraper/tag-scraper.py
+dev/tag-scraper/tag_lists/all_tags.txt
+dev/tag-scraper/tag_lists/artist.txt
+dev/tag-scraper/tag_lists/categorize_files.py
+dev/tag-scraper/tag_lists/character.txt
+dev/tag-scraper/tag_lists/copyright.txt
+dev/tag-scraper/tag_lists/general.txt
+dev/tag-scraper/tag_lists/meta.txt
+dev/taglist-scraper/danbooru-taglist-scraper.bat
+dev/taglist-scraper/danbooru-taglist-scraper.py
+dev/taglist-scraper/rearranger.py
+lists/!notes.txt
+lists/categorized_tags.txt
+lists/taglists-explicit.txt
+lists/taglists-general.txt
+lists/taglists-questionable.txt
+lists/taglists-sensitive.txt
+preview_history.py
+pyproject.toml
+raffle.py
+readme.md
+tag_category_strength.py
